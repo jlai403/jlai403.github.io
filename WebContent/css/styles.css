@@ -1,17 +1,48 @@
 @CHARSET "utf-8";
 
-article {
-	height: 95%;
+body{
+	font-family: 'Raleway', cursive;
 }
 
-div#footer{
-	bottom: 1%;
+div#main-content{
+	width:100%;
+	height: 100%;
+}
+
+div#nav{
 	width: 100%;
-	font-family: 'Raleway', cursive;
-	color: #cccccc;
-	font-size: 80%;
-	text-align: center;
+	top:50%;
+	margin-top: -120px;
 	position: absolute;
+	text-align: center;
+	color: #cccccc;
+}
+
+div#nav ul{
+	display: inline-block;
+}
+
+div#nav ul li{
+	border-right: 1px solid;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+div#nav ul li.lastLi{
+	border-right: none;
+}
+
+a{
+	text-decoration: none;
+}
+
+a:LINK{
+	color: #cccccc;
+}
+
+a:HOVER{
+/* 	color: #3198dd; */
+	color: #ffffff;
 }
 
 div#box{
@@ -44,7 +75,6 @@ div#name{
 }
 
 div#description{
-	font-family: 'Raleway', cursive;
 	font-size: 80%;
 	color: #cccccc;
 	top: 52%;
@@ -95,6 +125,15 @@ div#triangle-r{
     z-index: 0;
 }
 
+div#footer{
+	bottom: 1%;
+	width: 100%;
+	color: #cccccc;
+	font-size: 80%;
+	text-align: center;
+	position: absolute;
+}
+
 div#adobe-wrapper{
 	left: 5px;
 	bottom: 1px;
@@ -109,10 +148,6 @@ div#icon-wrapper{
 
 div#icon-wrapper ul{
 	list-style: none;	
-}
-
-a{
-	text-decoration: none;
 }
 
 ul li {
