@@ -1,12 +1,12 @@
 $(document).ready(function (){
-	$('#main-content').css('opacity', '0').fadeTo(1500, 1,'swing'); 
+	$('#main-content').hide().fadeIn(1500);
 });
 
 $(function(){
 	$('a.navlink').click(function(e){
 	    e.preventDefault();
 	    linkLocation = $(this).attr('href');
-	    $('#main-content').fadeOut(1500, function(){
+	    $('#main-content').fadeOut(500, function(){
 	    	redirectPage(linkLocation)
 	    });  
 	});
