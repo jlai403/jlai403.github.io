@@ -4,6 +4,19 @@ article {
 	height: 95%;
 }
 
+a{
+	text-decoration: none;
+}
+
+a:LINK{
+	color: #cccccc;
+}
+
+a:HOVER{
+/* 	color: #3198dd; */
+	color: #ffffff;
+}
+
 div#footer{
 	bottom: 1%;
 	width: 100%;
