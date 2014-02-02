@@ -33,8 +33,14 @@ div#nav ul li.lastLi{
 	border-right: none;
 }
 
-a{
+div#nav ul li a{
+	font-weight: normal;
 	text-decoration: none;
+}
+
+a{
+	font-weight: bold;
+	text-decoration: underline;
 }
 
 a:LINK{
