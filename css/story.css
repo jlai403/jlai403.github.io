@@ -1,1 +1,44 @@
 @CHARSET "utf-8";
+
+/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+/* overridden from styles.css														*/
+/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+div#nav{
+	margin-top: -220px;
+}
+
+div#box{
+	height: 400px;
+	width: 600px;
+	margin-top: -200px;
+	margin-left: -300px;
+}
+
+div#description{
+	font-size: 80%;
+	color: #cccccc;
+	top: 52%;
+	width: 99%;
+	position: absolute;
+	text-align: right;
+	z-index: 2;
+}
+
+div#ribbon{
+	width: 620px;
+	top: 14%;
+}
+
+div#triangle-l{
+    top: 24%;
+}
+
+div#triangle-r{
+    top: 24%;
+    left: 600px;
+}
+
+/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+/* story.html dependent																*/
+/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+
