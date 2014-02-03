@@ -52,6 +52,10 @@ a:HOVER{
 	color: #ffffff;
 }
 
+a:VISITED{
+	color:#cccccc;
+}
+
 div#box{
 	height: 200px;
 	width: 400px;
