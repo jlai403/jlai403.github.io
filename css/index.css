@@ -1,0 +1,67 @@
+@CHARSET "utf-8";
+
+/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+/* icon wrappers																	*/
+/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+div#adobe-wrapper{
+	left: 5px;
+	bottom: 1px;
+	position: absolute;
+}
+
+div#icon-wrapper{
+	right: 5px;
+	bottom: 1px;
+	position: absolute;
+}
+
+div#icon-wrapper ul{
+	list-style: none;	
+}
+
+
+.item img{
+	visibility: hidden;
+}
+
+/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+/* resume																			*/
+/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+div#resume_wrapper {
+	visibility: hidden;
+	width: 75%;
+	height: 600px;
+	margin-left: 12.5%;
+	margin-top: -300px;
+	top: 50%;
+	position: absolute;
+	color:#FFF;
+	text-align: right;
+	border: 5px solid #444;
+	background-color: #444;
+	
+	/*inner shadow*/
+	-moz-box-shadow:    3 3 3 10px #000;
+   	-webkit-box-shadow: 3 3 3 10px #000;
+   	box-shadow:         3 3 3 10px #000;
+	
+}
+
+object#resume_object{
+	height: 96.5%;
+	width: 100%;
+}
+
+span.resume_close_lbl{
+	height: 100%;
+	font-size: 65%;
+	padding-right: 0.5%;
+}
+
+a#resume_link_close {
+	color: #cccccc;
+	text-decoration: none;
+	font-weight: bolder;
+	padding-right: 0.5%;
+	vertical-align: middle;
+}

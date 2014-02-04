@@ -156,26 +156,6 @@ div#footer{
 	text-align: center;
 }
 
-div#adobe-wrapper{
-	left: 5px;
-	bottom: 1px;
-	position: absolute;
-}
-
-div#icon-wrapper{
-	right: 5px;
-	bottom: 1px;
-	position: absolute;
-}
-
-div#icon-wrapper ul{
-	list-style: none;	
-}
-
 ul li {
 	float: left;	
-}
-
-.item img{
-	visibility: hidden;
 }

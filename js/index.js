@@ -1,4 +1,6 @@
-
+//$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+// Icon grayscale overlay
+//$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 $(window).load(function(){
 	$('.item img').each(function(){
 		var el = $(this);
@@ -42,3 +44,22 @@ function grayscale(src){
 	ctx.putImageData(imgPixels, 0, 0, 0, 0, imgPixels.width, imgPixels.height);
 	return canvas.toDataURL();
 }
+
+//$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+// Resume link click
+//$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+$(function(){
+	$('a#resume_link').click(function(e){
+	    e.preventDefault();
+	    $('#resume_wrapper').css("visibility", "visible");
+	    $('#resume_wrapper').css("z-index", "999"); //to prevent icon overlays from showing
+	});
+});
+
+$(function(){
+	$('a#resume_link_close').click(function(e){
+		e.preventDefault();
+		$('#resume_wrapper').css("visibility", "hidden");
+		$('#resume_wrapper').css("z-index", "997"); //to allow icon overlays
+	});
+});

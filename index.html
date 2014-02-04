@@ -15,6 +15,7 @@
 	<!-- CSS -->
 	<link rel="stylesheet" href="./css/reset.css"/>
 	<link rel="stylesheet" href="./css/styles.css"/>
+	<link rel="stylesheet" href="./css/index.css"/>
 	
 	
 	<!-- JS -->
@@ -63,7 +64,7 @@
 				<ul>
 					<li>
 						<div class="item">
-							<a href="/res/Joey_Lai_Resume_2014.pdf">
+							<a id="resume_link" href="#resume" target="resume_iframe">
 								<img src="./img/pdf.png" title="resume">
 							</a>
 						</div>
@@ -118,8 +119,14 @@
 			</div> <!-- #icon-wrapper -->
 		</div> <!-- #box -->	
 		
+				
 		<iframe id="footer_iframe" src="./footer.html">#footer</iframe>
 	</div> <!-- #main-content -->
+
+	<div id="resume_wrapper">
+		<object id="resume_object" data="./res/Joey_Lai_Resume_2014.pdf"></object>
+		<a id="resume_link_close" href="#resume_close"><span class="resume_close_lbl">CLOSE</span>X</a>
+	</div>
 </body>
 
 
