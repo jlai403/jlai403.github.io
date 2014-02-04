@@ -51,7 +51,7 @@ function grayscale(src){
 $(function(){
 	$('a#resume_link').click(function(e){
 	    e.preventDefault();
-	    $('#resume_wrapper').css("visibility", "visible");
+	    $('#resume_wrapper').css("opacity", "1");
 	    $('#resume_wrapper').css("z-index", "999"); //to prevent icon overlays from showing
 	});
 });
@@ -59,7 +59,13 @@ $(function(){
 $(function(){
 	$('a#resume_link_close').click(function(e){
 		e.preventDefault();
-		$('#resume_wrapper').css("visibility", "hidden");
-		$('#resume_wrapper').css("z-index", "997"); //to allow icon overlays
+		$('#resume_wrapper').css("opacity", "0");
+		$('#resume_wrapper').css("z-index", "-1"); //to allow icon overlays
 	});
+});
+
+$(document).keyup(function(e) {
+	  if (e.keyCode == 27) {
+		  $('#resume_link_close').click();
+	  }   // esc
 });
