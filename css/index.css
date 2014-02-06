@@ -69,8 +69,7 @@ div#resume_wrapper {
    	box-shadow:         3 3 3 10px #000;
 	
 	/*transition*/
-	transition: all 1s linear;
-	
+	transition: all 0.5s linear;
 }
 
 object#resume_object{

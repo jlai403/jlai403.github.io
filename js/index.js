@@ -60,12 +60,21 @@ $(function(){
 	$('a#resume_link_close').click(function(e){
 		e.preventDefault();
 		$('#resume_wrapper').css("opacity", "0");
-		$('#resume_wrapper').css("z-index", "-1"); //to allow icon overlays
+		$('#resume_wrapper').css("z-index", "-1"); //to allow nav and icon overlays
 	});
 });
 
 $(document).keyup(function(e) {
-	  if (e.keyCode == 27) {
+	  if (e.keyCode == 27) {	// esc
 		  $('#resume_link_close').click();
-	  }   // esc
+	  }   
+});
+
+$('html').click(function(e){
+	if($(e.target).parent().index($('#resume_wrapper')) == -1) {
+		if($('#resume_wrapper').css('opacity') == '1') {
+			$('#resume_wrapper').css("opacity", "0");
+			$('#resume_wrapper').css("z-index", "-1");
+		}
+	}
 });
