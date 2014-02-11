@@ -24,13 +24,13 @@ nav ul{
 }
 
 nav ul li{
-	border-left: none;
+	border-left: 1px solid;
 	padding-left: 5px;
 	padding-right: 5px;
 }
 
 nav ul li:FIRST-CHILD{
-	border-left: 1px solid;
+	border-left: none;
 }
 
 nav ul li a{
