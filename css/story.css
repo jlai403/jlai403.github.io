@@ -58,7 +58,7 @@ div#story p{
 	display: inline-block;
 }
 
-img#profile_pic{
+img#gravatar{
 	float: right;
 	width: 100px;
 	margin-right: 3%;
