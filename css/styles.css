@@ -29,8 +29,7 @@ nav ul li{
 	padding-right: 5px;
 }
 
-/* only apply to li immediately after another li*/
-nav ul li + li{
+nav ul li:FIRST-CHILD{
 	border-left: 1px solid;
 }
 
