@@ -10,7 +10,7 @@ div#main-content{
 	height: 100%;
 }
 
-div#nav{
+nav{
 	width: 100%;
 	top:50%;
 	margin-top: -120px;
@@ -19,21 +19,22 @@ div#nav{
 	color: #cccccc;
 }
 
-div#nav ul{
+nav ul{
 	display: inline-block;
 }
 
-div#nav ul li{
-	border-right: 1px solid;
+nav ul li{
+	border-left: none;
 	padding-left: 5px;
 	padding-right: 5px;
 }
 
-div#nav ul li.lastLi{
-	border-right: none;
+/* only apply to li immediately after another li*/
+nav ul li + li{
+	border-left: 1px solid;
 }
 
-div#nav ul li a{
+nav ul li a{
 	font-weight: normal;
 	text-decoration: none;
 }
