@@ -1,0 +1,11 @@
+@CHARSET "utf-8";
+
+div#portfolio_description{
+	font-size: 80%;
+	color: #cccccc;
+	top: 52%;
+	width: 99%;
+	position: absolute;
+	text-align: center;
+	z-index: 2;
+}

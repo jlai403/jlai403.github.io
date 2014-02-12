@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>{{site.name}}</title>
+	
+	<!-- META -->
+	<meta name="description" content="jlai Consulting Inc. Independent software developer 
+		consultant hoping to provide innovative, creative, sustainable and measurable solutions for Information Systems.">
+	<meta name="keywords" content="Joey,Lai,jlai,HTML,CSS,XML,JavaScript,jQuery,Developer,Programmer">
+	<meta name="author" content="Joey Lai">
+	<meta charset="UTF-8">
+	
+	<!-- ICON -->
+	<link rel="shortcut icon" href="./img/favicon.ico" />
+	
+	 <!--[if IE]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+      </script>
+    <![endif]-->
+    
+	<!-- CSS -->
+	<link rel="stylesheet" href="/css/reset.css"/>
+	<link rel="stylesheet" href="/css/styles.css"/>
+	{% if page.css %}<link rel="stylesheet" href="/css/{{ page.css }}.css" type="text/css" />{% endif %}
+	
+	<!-- JS -->
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="/js/page.js"></script>
+	{% if page.js %}<script type="text/javascript" src="/js/{{ page.js }}.js"></script>{% endif %}
+	
+	<!-- FONTS -->
+	<link href='http://fonts.googleapis.com/css?family=Great+Vibes&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Raleway:100' rel='stylesheet' type='text/css'>
+
+	<!-- ANALYTICS -->
+	<script type="text/javascript">
+		 var _gaq = _gaq || [];
+		 _gaq.push(['_setAccount', 'UA-32196137-1']);
+		 _gaq.push(['_trackPageview']);
+		
+		 (function() {
+		   var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		   ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		 })();
+	</script>
+</head>
+
+<body onselectstart="return false">
+	<div id="main-content">
+		<nav>
+			<ul>
+				<li><a class="navlink" href="/" >HOME</a>
+				<li><a class="navlink" href="/biography_story">STORY</a>
+				<li><a class="navlink" href="/development_portfolio">PORTFOLIO</a>
+				<li><a class="navlink" href="/blog">BLOG</a>
+			</ul>		
+		</nav>
+		<div id="box">
+			<div id="name">&nbsp;Joey Lai</div>
+			<div id="ribbon"></div>
+			<div id="triangle-l"></div>
+			<div id="triangle-r"></div>
+		
+			{{ content }}
+		</div>
+		
+		{% if page.title == 'Joey Lai' %}
+		<div id="resume_wrapper">
+			<object id="resume_object" data="./res/Joey_Lai_Resume_2014.pdf"></object>
+			<span class="resume_close_lbl">(ESC) CLOSE</span><a id="resume_link_close" href="#resume_close">X</a>
+		</div>
+		{% endif %}
+		
+		{% include footer.html %}
+	</div> 
+</body>
+
+</html>
