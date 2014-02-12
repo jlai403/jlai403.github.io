@@ -1,46 +1,11 @@
 @CHARSET "utf-8";
 
-body{
-	background-color: #000000;
-	font-family: 'Raleway', cursive;
-}
-
-div#main-content{
-	width:100%;
-	height: 100%;
-}
-
-nav{
-	width: 100%;
-	top:50%;
-	margin-top: -120px;
-	position: absolute;
-	text-align: center;
-	color: #cccccc;
-}
-
-nav ul{
-	display: inline-block;
-}
-
-nav ul li{
-	border-left: 1px solid;
-	padding-left: 5px;
-	padding-right: 5px;
-}
-
-nav ul li:FIRST-CHILD{
-	border-left: none;
-}
-
-nav ul li a{
-	font-weight: normal;
-	text-decoration: none;
+article {
+	height: 95%;
 }
 
 a{
-	font-weight: bold;
-	text-decoration: underline;
+	text-decoration: none;
 }
 
 a:LINK{
@@ -52,8 +17,14 @@ a:HOVER{
 	color: #ffffff;
 }
 
-a:VISITED{
-	color:#cccccc;
+div#footer{
+	bottom: 1%;
+	width: 100%;
+	font-family: 'Raleway', cursive;
+	color: #cccccc;
+	font-size: 80%;
+	text-align: center;
+	position: absolute;
 }
 
 div#box{
@@ -67,15 +38,12 @@ div#box{
 
 	-webkit-border-radius: 5px;
     -moz-border-radius: 5px;
-    -o-border-radius: 5px;
     border-radius: 5px;
     -webkit-box-shadow: 0px 0px 3px rgba(0,0,0,0.55);
     -moz-box-shadow: 0px 0px 3px rgba(0,0,0,0.55);
-    -o-box-shadow: 0px 0px 3px rgba(0,0,0,0.55);
     box-shadow: 0px 0px 3px rgba(0,0,0,0.55);
     background-image: -webkit-gradient(linear, left top, left bottom, from(#6a6b6b), to(#424242));
     background-image: -moz-linear-gradient(top,#6a6a6a,#424242);
-    background-image: -o-linear-gradient(top,#6a6a6a,#424242);
 }
 
 div#name{
@@ -89,6 +57,7 @@ div#name{
 }
 
 div#description{
+	font-family: 'Raleway', cursive;
 	font-size: 80%;
 	color: #cccccc;
 	top: 52%;
@@ -110,10 +79,8 @@ div#ribbon{
 	-webkit-box-shadow: 0px 0px 3px rgba(0,0,0,0.55);
     -moz-box-shadow: 0px 0px 3px rgba(0,0,0,0.55);
     box-shadow: 0px 0px 3px rgba(0,0,0,0.55);
-    -o-box-shadow: 0px 0px 3px rgba(0,0,0,0.55);
     background-image: -webkit-gradient(linear, left top, left bottom, from(#33acfc), to(#3198dd));
     background-image: -moz-linear-gradient(top,#33acfc,#3198dd);
-    background-image: -o-linear-gradient(top,#33acfc,#3198dd);
     text-shadow: #2187c8 0 -1px 1px;
 }
 
@@ -141,17 +108,30 @@ div#triangle-r{
     z-index: 0;
 }
 
-div#footer{
-	bottom: 1%;
-	width: 100%;
+div#adobe-wrapper{
+	left: 5px;
+	bottom: 1px;
 	position: absolute;
-	display: block;
-	height: 1em;
-	color: #cccccc;
-	font-size: 80%;
-	text-align: center;
+}
+
+div#icon-wrapper{
+	right: 5px;
+	bottom: 1px;
+	position: absolute;
+}
+
+div#icon-wrapper ul{
+	list-style: none;	
+}
+
+a{
+	text-decoration: none;
 }
 
 ul li {
 	float: left;	
+}
+
+.item img{
+	visibility: hidden;
 }

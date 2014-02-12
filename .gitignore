@@ -1,10 +1,6 @@
 # Reference: http://help.github.com/ignore-files/
 # Save as .gitignore at root of repository (or any sub-folder).
 
-# Jekyll #
-############
-_site
-
 # Compiled source #
 ###################
 bin
