@@ -3,35 +3,18 @@
 <head>
 	<title>{{site.name}}</title>
 	
-	<!-- META -->
-	<meta name="description" content="jlai Consulting Inc. Independent software developer 
-		consultant hoping to provide innovative, creative, sustainable and measurable solutions for Information Systems.">
-	<meta name="keywords" content="Joey,Lai,jlai,HTML,CSS,XML,JavaScript,jQuery,Developer,Programmer">
-	<meta name="author" content="Joey Lai">
-	<meta charset="UTF-8">
+	 {% include meta.html %}
+	 {% include css.html %}
+	 {% include js.html %}
 	
-	<!-- ICON -->
-	<link rel="shortcut icon" href="./img/favicon.ico" />
-	
-	<!-- CSS -->
-	<link rel="stylesheet" href="/css/reset.css"/>
-	<link rel="stylesheet" href="/css/styles.css"/>
-	{% if page.css %}<link rel="stylesheet" href="/css/{{ page.css }}.css" type="text/css" />{% endif %}
-	 
 	<!--[if IE]>
      	 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
     	</script>
     <![endif]-->
-    
-	<!-- JS -->
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-	<script type="text/javascript" src="/js/page.js"></script>
-	{% if page.js %}<script type="text/javascript" src="/js/{{ page.js }}.js"></script>{% endif %}
 	
-	<!-- FONTS -->
-	<link href='http://fonts.googleapis.com/css?family=Great+Vibes&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Raleway:100' rel='stylesheet' type='text/css'>
-
+	<!-- ICON -->
+	<link rel="shortcut icon" href="./img/favicon.ico" />
+	
 	<!-- ANALYTICS -->
 	<script type="text/javascript">
 		 var _gaq = _gaq || [];
