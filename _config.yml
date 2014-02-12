@@ -1,8 +1,0 @@
-name: "Joey Lai"
-
-url: "http://www.jlai.ca"
-
-paginate: 10
-
-markdown: rdiscount
-permalink: pretty
