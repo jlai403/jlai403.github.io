@@ -47,7 +47,7 @@
 </head>
 
 <body onselectstart="return false">
-	<div id="main-content">
+	<div id="fade">
 		<nav>
 			<ul>
 				<li><a class="navlink" href="/" >HOME</a>
@@ -56,24 +56,27 @@
 				<li><a class="navlink" href="/blog">BLOG</a>
 			</ul>		
 		</nav>
-		<div id="box">
-			<div id="name">&nbsp;Joey Lai</div>
-			<div id="ribbon"></div>
-			<div id="triangle-l"></div>
-			<div id="triangle-r"></div>
 		
-			{{ content }}
-		</div>
-		
-		{% if page.title == 'Joey Lai' %}
-		<div id="resume_wrapper">
-			<object id="resume_object" data="./res/Joey_Lai_Resume_2014.pdf"></object>
-			<span class="resume_close_lbl">(ESC) CLOSE</span><a id="resume_link_close" href="#resume_close">X</a>
-		</div>
-		{% endif %}
-		
-		{% include footer.html %}
-	</div> 
+		<div id="main-content">
+			<div id="box">
+				<div id="name">&nbsp;Joey Lai</div>
+				<div id="ribbon"></div>
+				<div id="triangle-l"></div>
+				<div id="triangle-r"></div>
+			
+				{{ content }}
+			</div>
+			
+			{% if page.title == 'Joey Lai' %}
+			<div id="resume_wrapper">
+				<object id="resume_object" data="./res/Joey_Lai_Resume_2014.pdf"></object>
+				<span class="resume_close_lbl">(ESC) CLOSE</span><a id="resume_link_close" href="#resume_close">X</a>
+			</div>
+			{% endif %}
+			
+			{% include footer.html %}
+		</div> 
+	</div> <!-- #fade -->
 </body>
 
 </html>
