@@ -13,16 +13,16 @@
 	<!-- ICON -->
 	<link rel="shortcut icon" href="./img/favicon.ico" />
 	
-	 <!--[if IE]>
-      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
-      </script>
-    <![endif]-->
-    
 	<!-- CSS -->
 	<link rel="stylesheet" href="/css/reset.css"/>
 	<link rel="stylesheet" href="/css/styles.css"/>
 	{% if page.css %}<link rel="stylesheet" href="/css/{{ page.css }}.css" type="text/css" />{% endif %}
-	
+	 
+	<!--[if IE]>
+     	 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+    	</script>
+    <![endif]-->
+    
 	<!-- JS -->
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script type="text/javascript" src="/js/page.js"></script>
@@ -48,14 +48,7 @@
 
 <body onselectstart="return false">
 	<div id="fade">
-		<nav>
-			<ul>
-				<li><a class="navlink" href="/" >HOME</a>
-				<li><a class="navlink" href="/biography_story">STORY</a>
-				<li><a class="navlink" href="/development_portfolio">PORTFOLIO</a>
-				<li><a class="navlink" href="/blog">BLOG</a>
-			</ul>		
-		</nav>
+		{% include nav.html %}
 		
 		<div id="main-content">
 			<div id="box">
@@ -63,10 +56,10 @@
 				<div id="ribbon"></div>
 				<div id="triangle-l"></div>
 				<div id="triangle-r"></div>
-			
 				{{ content }}
 			</div>
 			
+			<!-- display only on index -->
 			{% if page.title == 'Joey Lai' %}
 			<div id="resume_wrapper">
 				<object id="resume_object" data="./res/Joey_Lai_Resume_2014.pdf"></object>
