@@ -24,7 +24,6 @@ function redirectPage(link) {
 //$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 $(function(){
 	$('a#modal_link').click(function(e){
-//	    e.preventDefault();
 	    $('#modal').css("opacity", "1");
 	    $('#modal').css("z-index", "999"); //to prevent icon overlays from showing
 	});
@@ -32,7 +31,6 @@ $(function(){
 
 $(function(){
 	$('a#modal_link_close').click(function(e){
-//		e.preventDefault();
 		$('#modal').css("opacity", "0");
 		$('#modal').css("z-index", "-1"); //to allow nav and icon overlays
 	});
