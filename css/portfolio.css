@@ -3,7 +3,8 @@
 div#portfolio_description{
 	font-size: 80%;
 	color: #cccccc;
-	top: 52%;
+/* 	top: 52%; */ /* handwriting */
+	top: 55%;
 	width: 99%;
 	position: absolute;
 	text-align: center;

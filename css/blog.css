@@ -1,0 +1,66 @@
+@CHARSET "utf-8";
+
+/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+/* overridden from styles.css														*/
+/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+nav{
+	margin-top: -220px;
+}
+
+div#box{
+	height: 400px;
+	width: 600px;
+	margin-top: -200px;
+	margin-left: -300px;
+}
+
+div#ribbon{
+	width: 620px;
+	top: 14%;
+}
+
+div#triangle-l{
+    top: 24%;
+}
+
+div#triangle-r{
+    top: 24%;
+    left: 600px;
+}
+
+/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+/* blog.html dependent																*/
+/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+div#blogs{
+	width: 99%;
+	max-height: 255px;
+	top: 27%;
+	position: absolute;
+	overflow: auto;
+	padding: 10px;
+	
+	display: flex;
+	flex-direction: row;
+	jusify-content: flex-start;
+	flex-wrap: wrap;
+}
+
+.blogItem{
+	width: 100px;
+	height: 100px;
+	margin: 8px;
+	background-color: #000;
+	opacity: 0.5;
+	text-decoration: none;	
+	font-family: 'Droid Sans', sans-serif;
+}
+
+a.blogItem:ACTIVE{
+	
+}
+a.blogItem:VISITED{
+	
+}
+div.blogItem:HOVER {
+
+}

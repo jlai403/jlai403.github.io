@@ -35,21 +35,20 @@
 		
 		<div id="main-content">
 			<div id="box">
-				<div id="name">&nbsp;Joey Lai</div>
+<!-- 				<div id="name">&nbsp;Joey Lai</div> -->
+				<div id="name">
+					<img src="/img/jlai-consulting-logo.png">
+				</div>
 				<div id="ribbon"></div>
 				<div id="triangle-l"></div>
 				<div id="triangle-r"></div>
 				{{ content }}
 			</div>
 			
-			<!-- display only on index -->
-			{% if page.title == 'Joey Lai' %}
-			<div id="resume_wrapper">
-				<object id="resume_object" data="./res/Joey_Lai_Resume_2014.pdf"></object>
-				<span class="resume_close_lbl">(ESC) CLOSE</span><a id="resume_link_close" href="#resume_close">X</a>
+			<div id="modal">
+				<iframe name="iModal"></iframe>
+				<span class="modal_close_lbl">(ESC) CLOSE</span><a id="modal_link_close" href="#modal_close">X</a> 
 			</div>
-			{% endif %}
-			
 			{% include footer.html %}
 		</div> 
 	</div> <!-- #fade -->

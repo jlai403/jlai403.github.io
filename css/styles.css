@@ -82,16 +82,22 @@ div#name{
 	font-family: 'Great Vibes', cursive;
 	font-size: 300%;
 	color: #eeeeee;
-	top: 5%;
+/* 	top: 5%; */ /* handwriting */
+	left: 3%;
 	width: 100%;
 	position: absolute;
 	z-index: 2;
 }
 
+div#name > img{
+	height: 75px;
+}
+
 div#description{
 	font-size: 80%;
 	color: #cccccc;
-	top: 52%;
+/* 	top: 52%; */ /* handwriting */
+	top: 55%;
 	width: 99%;
 	position: absolute;
 	text-align: right;
@@ -102,7 +108,8 @@ div#ribbon{
 	height: 50px;
 	width: 420px;
 	margin-left: -10px;
-	top: 25%;
+/* 	top: 25%; */ /* handwriting */
+	top: 28%;
 	background-color: #3198dd;
 	position: absolute;
 	z-index: 1;
@@ -123,7 +130,8 @@ div#triangle-l{
     border-width:10px;
     height:0px;
     width:0px;
-    top: 45%;
+/*     top: 45%; */ /* handwriting */
+	top: 48%;
     position: absolute;
     left: -20px;
     z-index: 0;
@@ -135,10 +143,66 @@ div#triangle-r{
     border-width:10px;
     height:0px;
     width:0px;
-    top: 45%;
+/*     top: 45%; */ /* handwriting */
+    top: 48%;
     position: absolute;
     left: 400px;
     z-index: 0;
+}
+
+/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+/* modal																			*/
+/*$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$*/
+iframe{
+	height: 100%;
+	width: 100%;
+}
+
+div#modal {
+	opacity: 0;
+	width: 75%;
+	height: 600px;
+	margin-left: 12.5%;
+	margin-top: -300px;
+	top: 50%;
+	position: absolute;
+	color:#FFF;
+	text-align: right;
+	border: 5px solid #444;
+	background-color: #444;
+	z-index: -1;
+	
+	/*inner shadow*/
+	-moz-box-shadow:    3 3 3 10px #000;
+   	-webkit-box-shadow: 3 3 3 10px #000;
+   	box-shadow:         3 3 3 10px #000;
+	
+	/*transition*/
+	transition: all 0.5s linear;
+}
+
+span.modal_close_lbl{
+	font-size: 65%;
+	padding-right: 15px;
+	z-index:3;
+	position: absolute;
+	vertical-align: middle;
+	line-height: 1em;
+	bottom: 4px;
+	right: 0;
+}
+
+a#modal_link_close {
+	color: #cccccc;
+	text-decoration: none;
+	font-weight: bolder;
+	padding-right: 0.5%;
+	vertical-align: middle;
+	margin-left: -51px;
+	position: absolute;
+	bottom: 2px;
+	width: 49px;
+	z-index: 3;
 }
 
 div#footer{
