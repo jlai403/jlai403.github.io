@@ -54,6 +54,10 @@ div#blogs{
 	text-decoration: none;	
 	font-family: 'Droid Sans', sans-serif;
 	overflow: hidden;
+	
+	transition: all 1s;
+	-ms-transition: all 1s;
+	-webkit-transition: all 1s;
 }
 
 .postTitle{
@@ -68,11 +72,13 @@ div#blogs{
 }
 
 a.blogItem:ACTIVE{
-	
+	text-decoration: none;
 }
 a.blogItem:VISITED{
-	
+	text-decoration: none;	
 }
-div.blogItem:HOVER {
-
+a.blogItem:HOVER {
+	transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	-webkit-transform: scale(1.2);
 }
