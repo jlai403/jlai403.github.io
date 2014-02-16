@@ -53,6 +53,18 @@ div#blogs{
 	opacity: 0.5;
 	text-decoration: none;	
 	font-family: 'Droid Sans', sans-serif;
+	overflow: hidden;
+}
+
+.postTitle{
+	font-size: 75%;
+	width: 100%;
+	text-align: center;
+}
+
+.postExcerpt{
+	font-size: 50%;
+	font-weight: 400;
 }
 
 a.blogItem:ACTIVE{
