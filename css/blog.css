@@ -40,9 +40,13 @@ div#blogs{
 	padding: 10px;
 	
 	display: flex;
+	display: -webkit-flex;
 	flex-direction: row;
+	-webkit-flex-direction: row;
 	jusify-content: flex-start;
+	-webkit-jusify-content: flex-start;
 	flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
 }
 
 .blogItem{
