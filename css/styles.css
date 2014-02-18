@@ -1,5 +1,10 @@
 @CHARSET "utf-8";
 
+html{
+	background-color: #000000;
+	font-family: 'Raleway', cursive;
+}
+
 body{
 	background-color: #000000;
 	font-family: 'Raleway', cursive;
