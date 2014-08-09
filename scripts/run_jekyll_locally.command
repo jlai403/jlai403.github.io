@@ -1,4 +1,4 @@
 #!/bin/bash
 
-cd ~/Documents/workspace/web_dev
+cd ~/Documents/Projects/HTML/Website
 jekyll serve
