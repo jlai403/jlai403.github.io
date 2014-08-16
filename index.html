@@ -14,12 +14,17 @@
 	<![endif]-->
 	
 	<!-- ICON -->
-	<link rel="shortcut icon" href="./img/favicon.ico" />
+	<link rel="shortcut icon" href="img/favicon.ico" />
 	
-	<link rel="stylesheet" href="/css/modules/reset.css"/>
-	<link rel="stylesheet" href="/css/themes/jlai.css"/>
+	
+	<link href="css/bootstrap-3.2.0-dist/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/modules/reset.css"/>
+	<link rel="stylesheet" href="css/modules/header.css"/>
+	<link rel="stylesheet" href="css/modules/footer.css"/>
+	<link rel="stylesheet" href="css/themes/jlai.css"/>
 	
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="js/bootstrap-3.2.0-dist/bootstrap.min.js"></script>
 	
 	<!-- ANALYTICS -->
 	<script>
@@ -35,35 +40,47 @@
 </head>
 
 <body>
-	<div class="body">
-		<!-- HEADER -->
-		<nav>
-			<ul>
-				<li><a class="navlink" href="#home" >HOME</a></li>
-				<li><a class="navlink" href="#story">STORY</a></li>
-				<li><a class="navlink" href="#projects">PROJECTS</a></li>
-				<li><a class="navlink" href="#blog">BLOG</a></li>
-				<li><a class="navlink" href="#contact">CONTACT</a></li>
-			</ul>	
+	<!-- HEADER -->
+	<div class="navbar navbar-inverse navbar-fixed-top jlai-container" role="navigation" style="border: none; line-height: 0;">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">
+					<img src="img/jlai-consulting-logo.png" width="165px" style="position: absolute; margin-top: -12px;">
+				</a>
+			</div>
+			<div class="collapse navbar-collapse" style="float: right">
+				<ul class="nav navbar-nav">
+					<li><a href="#home" class="active">home</a></li>
+					<li><a href="#story">story</a></li>
+					<li><a href="#projects">projects</a></li>
+					<li><a href="#blog">blog</a></li>
+					<li><a href="#contact">contact</a></li>
+				</ul>
+			</div><!--/.nav-collapse -->
+		</div>
+		<div class="header-ribbon"></div>
+    </div>
+	<!-- END HEADER-->
 	
-			<div class="ribbon">
-			</div>	
-		</nav>
-		<!-- END HEADER -->
-		
-		<!-- CONTENT -->
-		
-		<!-- END CONTENT -->
-		
-	</div>
+	<!-- CONTENT -->
+
+	<!-- END CONTENT -->
+	
 	<!-- FOOTER -->
 	<div class="footer">
+		<div class="footer-ribbon"></div>
+		
 		© 2014, Joey Lai, All rights reserved. 	
 		<br/>
 		Hosted on <a href="http://www.github.com" target="_blank">GitHub</a>, 
 		Powered by <a href="http://www.jekyllrb.com" target="_blank">Jekyll</a>
-	</div> 
-<!-- END FOOTER -->
-
+	</div>
+	<!-- END FOOTER -->
 </body>
 </html>
