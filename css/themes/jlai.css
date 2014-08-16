@@ -9,8 +9,60 @@ html, body {
 	margin-bottom: -50px;
 }
 
+nav {
+	height: 100px;
+	width: 100%;
+	box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.55);
+	background-image: -moz-linear-gradient(center top , #6A6A6A, #424242);
+}
+
+nav ul {
+	float: right;
+	display: inline;
+	list-style-type: none;
+	height: 55px;
+	margin-right: 20px;
+}
+
+nav ul li {
+	display: inline-block;
+	margin-top: 30px;
+}
+
+.ribbon {
+	display: inline-block;
+	height: 45px;
+	width: 100%;
+	background-color: #3198DD;
+	z-index: 1;
+	box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.55);
+	background-image: -moz-linear-gradient(center top , #33ACFC, #3198DD);
+	text-shadow: 0px -1px 1px #2187C8;
+}
+
+.navlink {
+	color: #fff;
+	padding: 0 5px;
+	font-size: 16px;
+	font-family: arial;
+	text-decoration: none;
+}
+
+.navlink:active, .navlink:visited {
+	text-decoration: none;
+	color: #fff;
+}
+
+.navlink:hover {
+	text-decoration: none;
+	color: #ccc;
+}
+
 .footer {
 	height: 50px;
 	color: #ccc;
 	text-align: center;
+	font-size: 11px;
+	font-family: arial;
+	padding: 15px;
 }
