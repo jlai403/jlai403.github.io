@@ -1,4 +1,4 @@
 #!/bin/bash
 
-cd ~/Documents/Projects/HTML/Website
+cd ~/Documents/Development/Projects/jlai403.github.io
 jekyll serve
