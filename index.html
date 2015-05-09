@@ -25,6 +25,10 @@
 
     <link href="packages/font-awesome-4.3.0/css/font-awesome.min.css" rel="stylesheet">
 
+    <link href="packages/SimpleDropdownEffects/css/common.css" rel="stylesheet">
+    <script src="packages/SimpleDropdownEffects/js/modernizr.custom.63321.js"></script>
+    <script src="packages/SimpleDropdownEffects/js/jquery.dropdown.js"></script>
+
     <link rel="stylesheet" href="css/layouts/reset.css" />
     <link rel="stylesheet" href="css/layouts/layout.css" />
     <link rel="stylesheet" href="css/layouts/header.css" />
@@ -59,6 +63,10 @@
 
 <script>
     $(document).ready(function () {
+        $('#cd-dropdown').dropdown({
+            gutter: 5
+        });
+
         $('#fullpage').fullpage({
             sectionsColor: ['#ffffff', '#ecf0f1', '#bdc3c7', '#2c3e50', '#2980b9'],
             anchors: ['', 'about', 'skills', 'projects', 'blog'],
@@ -85,7 +93,7 @@
                 <div class="title">.jlai</div>
                 <div class="sub-title">software developer & lifetime learner</div>
 
-                <nav class="navbar">
+                <nav class="main">
                     <ul class="nav navbar-nav">
                         <li>
                             <a class="nav-link" href="#about">about</a>
@@ -104,6 +112,16 @@
                         </li>
                     </ul>
                 </nav>
+                <nav class="mobile">
+                    <select id="cd-dropdown" name="cd-dropdown" class="cd-select">
+                        <option value="-1" selected>menu</option>
+                        <option value="1" data-href="#about">about</option>
+                        <option value="2" data-href="#skills">skills</option>
+                        <option value="3" data-href="#blog">blog</option>
+                        <option value="4" data-href="#profile">profile</option>
+                        <option value="5" data-href="#contact">contact</option>
+                    </select>
+                </nav>
 
                 <div class="social">
                     <a class="facebook" href="https://facebook.com/joey.lai" target="_blank">
@@ -114,6 +132,9 @@
                     </a>
                     <a class="github" href="https://github.com/jlai403" target="_blank">
                         <i class="fa fa-github"></i>
+                    </a>
+                    <a class="stackoverflow" href="http://stackoverflow.com/users/2060484/joey" target="_blank">
+                        <i class="fa fa-stack-overflow"></i>
                     </a>
                     <a class="instagram" href="https://instagram.com/_jlai/" target="_blank">
                         <i class="fa fa-instagram"></i>
