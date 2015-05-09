@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="css/layouts/header.css" />
     <link rel="stylesheet" href="css/layouts/footer.css" />
     <link rel="stylesheet" href="css/modules/animation.css" />
+    <link rel="stylesheet" href="css/modules/fullpage-overrides.css" />
     <link rel="stylesheet" href="css/themes/index.css" />
 
     <link href='http://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:300|Lato' rel='stylesheet' type='text/css'>
@@ -61,7 +62,16 @@
             anchors: ['', 'about', 'skills', 'projects', 'blog'],
             continuousVertical: true,
             controlArrows: true,
-            scrollBar: true
+            navigation: true,
+            navigationPosition: 'right',
+            navigationTooltips: ['home', 'about', 'skills', 'projects', 'blog'],
+            afterLoad: function (anchorLink, index) {
+                switch (anchorLink) {
+                case "about":
+                    $(".about.section .title").removeClass("hidden").addClass("slideInLeft")
+                    break;
+                }
+            }
         });
     });
 </script>
@@ -76,25 +86,25 @@
                 <nav class="navbar">
                     <ul class="nav navbar-nav">
                         <li>
-                            <a href="#about">about</a>
+                            <a class="nav-link" href="#about">about</a>
                         </li>
                         <li>
-                            <a href="#skills">skills</a>
+                            <a class="nav-link" href="#skills">skills</a>
                         </li>
                         <li>
-                            <a href="#projects">projects</a>
+                            <a class="nav-link" href="#projects">projects</a>
                         </li>
                         <li>
-                            <a href="#blog">blog</a>
+                            <a class="nav-link" href="#blog">blog</a>
                         </li>
                         <li>
-                            <a href="mailto:joey@jlai.ca">contact</a>
+                            <a class="nav-link" href="mailto:joey@jlai.ca">contact</a>
                         </li>
                     </ul>
                 </nav>
             </div>
 
-            <a href="#about">
+            <a class="nav-link" href="#about">
                 <div class="learn-more">
                     <p class="learn-more bouncing">learn more about joey</p>
                     <p class="bouncing"> <i class="glyphicon glyphicon-chevron-down"></i> </p>
@@ -102,7 +112,11 @@
             </a>
         </div>
 
-        <div class="section"></div>
+        <div class="about section">
+            <div class="title hidden">about</div>
+        </div>
+        <!-- -->
+
         <div class="section"></div>
         <div class="section"></div>
         <div class="section">
