@@ -11,6 +11,7 @@ a.nav-link:link,
 a.nav-link:active,
 a.nav-link:hover,
 a.nav-link:visited {
+    text-decoration: none;
     font-size: 14px !important;
     font-weight: 500 !important;
     color: #354b60;
@@ -19,6 +20,7 @@ a.nav-link:visited {
 }
 
 a.nav-link:hover {
+    text-decoration: none;
     transition: color 1s ease;
     color: #e74c3c !important;
 }
