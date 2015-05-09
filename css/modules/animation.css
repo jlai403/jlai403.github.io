@@ -1,0 +1,54 @@
+.bouncing {
+    animation: bouncing 1.5s infinite;
+    -moz-animation: bouncing 1.5s infinite;
+    -webkit-animation: bouncing 1.5s infinite;
+    -o-animation: bouncing 1.5s infinite;
+}
+
+@keyframes bouncing {
+    0% {
+        transform: translateY(0%);
+    }
+    50% {
+        transform: translateY(65%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@-webkit-keyframes bouncing {
+    0% {
+        -webkit-transform: translateY(0%);
+    }
+    50% {
+        -webkit-transform: translateY(65%);
+    }
+    100% {
+        -webkit-transform: translateY(0%);
+    }
+}
+
+@-moz-keyframes bouncing {
+    0% {
+        -webkit-transform: translateY(0%);
+    }
+    50% {
+        -webkit-transform: translateY(65%);
+    }
+    100% {
+        -webkit-transform: translateY(0%);
+    }
+}
+
+@-o-keyframes bouncing {
+    0% {
+        -webkit-transform: translateY(0%);
+    }
+    50% {
+        -webkit-transform: translateY(65%);
+    }
+    100% {
+        -webkit-transform: translateY(0%);
+    }
+}

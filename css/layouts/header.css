@@ -1,0 +1,39 @@
+div.header {
+    height: 300px;
+    text-align: center;
+}
+
+div.header .title {
+    font-family: "Lato";
+    font-size: 50px;
+    font-weight: bolder;
+    margin: 50px auto 10px;
+}
+
+div.header .sub-title {
+    font-family: "Lato";
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+div.header nav.navbar {
+    display: inline-block;
+    text-align: center;
+}
+
+div.header a,
+div.header a:link,
+div.header a:active,
+div.header a:hover,
+div.header a:visited {
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    color: #354b60;
+    text-transform: uppercase;
+    background-color: transparent !important;
+}
+
+div.header a:hover {
+    transition: all 1s ease;
+    color: #e74c3c !important;
+}
