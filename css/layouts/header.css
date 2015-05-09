@@ -3,6 +3,21 @@ div.header {
     text-align: center;
 }
 
+@media screen and (max-width: 480px) {
+    div.header {
+        margin-top: -250px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    div.header .title {
+        font-size: 45px;
+    }
+    div.header .sub-title {
+        font-size: 18px;
+    }
+}
+
 div.header .title {
     font-family: "Lato";
     font-size: 50px;
