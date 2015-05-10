@@ -68,7 +68,7 @@
         });
 
         $('#fullpage').fullpage({
-            sectionsColor: ['#ffffff', '#ecf0f1', '#bdc3c7', '#2c3e50', '#2980b9'],
+            sectionsColor: ['#ffffff', '#3498db', '#bdc3c7', '#2c3e50', '#2980b9'],
             anchors: ['', 'about', 'skills', 'projects', 'blog'],
             continuousVertical: true,
             controlArrows: true,
@@ -79,6 +79,7 @@
                 switch (anchorLink) {
                 case "about":
                     $(".about.section .title").removeClass("hidden").addClass("slideInLeft")
+                    $(".about.section .container .cell").removeClass("hidden").addClass("slideInBottom")
                     break;
                 }
             }
@@ -122,7 +123,6 @@
                         <option value="5" data-href="#contact">contact</option>
                     </select>
                 </nav>
-
                 <div class="social">
                     <a class="facebook" href="https://facebook.com/joey.lai" target="_blank">
                         <i class="fa fa-facebook"></i>
@@ -159,8 +159,38 @@
 
         <div class="about section">
             <div class="title hidden">about</div>
+            <div class="container" style="padding: 0 50px">
+                <div class="row">
+                    <div class="col-md-4 cell hidden" style="padding: 15px">
+                        <h3>Full Name</h3>
+                        <h4>Joey Lai</h4>
+                    </div>
+                    <div class="col-md-4 cell hidden" style="padding: 15px">
+                        <h3>Born</h3>
+                        <h4>Hong Kong</h4>
+                    </div>
+                    <div class="col-md-4 cell hidden" style="padding: 15px">
+                        <h3>Year</h3>
+                        <h4>1991</h4>
+                    </div>
+
+                </div>
+                <div class="row" style="margin-top: 35px;">
+                    <div class="col-md-4 cell hidden" style="padding: 15px">
+                        <h3>Located</h3>
+                        <h4>Calgary, AB, Canada</h4>
+                    </div>
+                    <div class="col-md-4 cell hidden" style="padding: 15px">
+                        <h3>Education</h3>
+                        <h4>SAIT, Mount Royal University</h4>
+                    </div>
+                    <div class="col-md-4 cell hidden" style="padding: 15px">
+                        <h3>Interests</h3>
+                        <h4>Car Enthusiast, Sports, Gaming</h4>
+                    </div>
+                </div>
+            </div>
         </div>
-        <!-- -->
 
         <div class="section"></div>
         <div class="section"></div>

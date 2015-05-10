@@ -27,3 +27,19 @@ div.learn-more i.glyphicon-chevron-down {
     line-height: 1.75;
     font-weight: bolder;
 }
+
+.about .container {
+    margin-top: 35px;
+}
+
+.about h3 {
+    padding: 0;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.30);
+    font-weight: bolder;
+    font-size: 18px;
+}
+
+.about h4 {
+    color: #eeeeee;
+}
