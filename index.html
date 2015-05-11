@@ -34,7 +34,9 @@
     <link rel="stylesheet" href="css/layouts/header.css" />
     <link rel="stylesheet" href="css/layouts/footer.css" />
     <link rel="stylesheet" href="css/modules/animation.css" />
+    <link rel="stylesheet" href="css/modules/colors.css" />
     <link rel="stylesheet" href="css/modules/fullpage-overrides.css" />
+    <link rel="stylesheet" href="css/modules/timeline.css" />
     <link rel="stylesheet" href="css/themes/index.css" />
 
     <link href='http://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:300|Lato' rel='stylesheet' type='text/css'>
@@ -75,12 +77,18 @@
             navigation: true,
             navigationPosition: 'right',
             navigationTooltips: ['home', 'about', 'skills', 'projects', 'blog'],
+            autoScrolling: false,
+            fitToSection: false,
             afterLoad: function (anchorLink, index) {
                 switch (anchorLink) {
                 case "about":
                     $(".about.section .title").removeClass("hidden").addClass("slideInLeft")
                     $(".about.section .container .cell").removeClass("hidden").addClass("slideInBottom")
                     break;
+                case "skills":
+                    $(".skills.section .title").removeClass("hidden").addClass("slideInLeft")
+                    $(".skills.section .skills.column").removeClass("hidden").addClass("slideInLeft")
+                    $(".skills.section .timeline.column").removeClass("hidden").addClass("slideInRight")
                 }
             }
         });
@@ -173,7 +181,6 @@
                         <h3>Year</h3>
                         <h4>1991</h4>
                     </div>
-
                 </div>
                 <div class="row" style="margin-top: 35px;">
                     <div class="col-md-4 cell hidden" style="padding: 15px">
@@ -192,7 +199,139 @@
             </div>
         </div>
 
-        <div class="section"></div>
+        <div class="skills section">
+            <div class="title hidden">skills</div>
+            <div class="container" style="padding: 0 50px">
+                <div class="row">
+                    <div class="col-md-6 skills column hidden">
+                        <h3>Languages</h3>
+                        <ul class="skills">
+                            <li>C# .NET</li>
+                            <li>Java</li>
+                            <li>T-SQL</li>
+                            <li>HTML/CSS</li>
+                            <li>Javascript/jQuery</li>
+                            <li>Swift</li>
+                        </ul>
+                        <div class="row" style="margin: 50px 0;">
+                            <a class="white button" href="res/Joey_Lai_Resume_2014.pdf" alt="2014">download resume</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 timeline column hidden">
+                        <h3>Timeline</h3>
+                        <ul id="timeline">
+                            <li class="work">
+                                <input class="radio" id="timeline1" name="timeline" type="radio" checked="">
+                                <div class="relative">
+                                    <label for="timeline1">Personal webpages</label>
+                                    <span class="date">2004 - Present</span>
+                                    <span class="circle"></span>
+                                </div>
+                                <div class="content">
+                                    <p>
+                                        • self taught html, css, javascript
+                                        <br/> • CalgaryPlanet, Xanga, Freewebs
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="work">
+                                <input class="radio" id="timeline2" name="timeline" type="radio">
+                                <div class="relative">
+                                    <label for="timeline2">SAIT Polytechnic</label>
+                                    <span class="date">2009 - 2011</span>
+                                    <span class="circle"></span>
+                                </div>
+                                <div class="content">
+                                    <p>
+                                        • enrolled in SAIT Polytechnic
+                                        <br/> • Information Technology Diploma
+                                        <br/> • software development major
+                                        <br/> • graduated with honors
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="work">
+                                <input class="radio" id="timeline3" name="timeline" type="radio">
+                                <div class="relative">
+                                    <label for="timeline3">CGI Group Inc.</label>
+                                    <span class="date">2011 - 2013</span>
+                                    <span class="circle"></span>
+                                </div>
+                                <div class="content">
+                                    <p>
+                                        • Junior Software Developer
+                                        <br/> • production accounting system for major o&g companies
+                                        <br/> • TDD, SCRUM, Agile, Extreme Programming
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="work">
+                                <input class="radio" id="timeline4" name="timeline" type="radio">
+                                <div class="relative">
+                                    <label for="timeline4">Mount Royal University</label>
+                                    <span class="date">2012 - 2015</span>
+                                    <span class="circle"></span>
+                                </div>
+                                <div class="content">
+                                    <p>
+                                        • enrolled in Mount Royal University
+                                        <br/> • Bachelor of Computer Information Systems
+                                        <br/> • minor in Business
+                                        <br/> • deans honor roll
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="work">
+                                <input class="radio" id="timeline5" name="timeline" type="radio">
+                                <div class="relative">
+                                    <label for="timeline5">jlai Consulting Inc.</label>
+                                    <span class="date">2013 - present</span>
+                                    <span class="circle"></span>
+                                </div>
+                                <div class="content">
+                                    <p>
+                                        • founder
+                                        <br/> • indepdenent sub contractor via ItForDev
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="work">
+                                <input class="radio" id="timeline6" name="timeline" type="radio">
+                                <div class="relative">
+                                    <label for="timeline6">Evoco</label>
+                                    <span class="date">2013 - 2014</span>
+                                    <span class="circle"></span>
+                                </div>
+                                <div class="content">
+                                    <p>
+                                        • indepedent sub contractor via ItForDev
+                                        <br/> • DevOps for a construction project management software
+                                        <br/> • integration, legacy&production data
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="work">
+                                <input class="radio" id="timeline7" name="timeline" type="radio">
+                                <div class="relative">
+                                    <label for="timeline7">Knelf</label>
+                                    <span class="date">2014 - present</span>
+                                    <span class="circle"></span>
+                                </div>
+                                <div class="content">
+                                    <p>
+                                        • gamified self learning platform for individuals
+                                        <br/> • highly skilled leaders and mentors
+                                        <br/> • TDD, SCRUM, Lean, Agile, Extreme Programming
+                                    </p>
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="section"></div>
         <div class="section">
             <footer>
