@@ -1,0 +1,90 @@
+.tile {
+    height: 250px;
+    width: 250px;
+    margin: 15px auto;
+    vertical-align: bottom;
+    text-align: center;
+    border: 5px solid rgba(0, 0, 0, .15);
+    position: relative;
+    transition: all 0.5s ease-out;
+}
+
+.tile:HOVER {
+    height: 270px;
+    width: 270px;
+    top: -10px;
+    transition: all 0.5s ease-out;
+}
+
+.tile img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.tile img.fill-width {
+    width: 250px;
+    max-width: 100%;
+    transition: all 0.5s ease-out;
+}
+
+.tile:HOVER img.fill-width {
+    width: 270px;
+    max-width: 100%;
+}
+
+.tile img.fill-width.center {
+    top: 40%;
+    transform: translateY(-50%);
+}
+
+.tile:HOVER img.fill-width.center {
+    top: 40%;
+}
+
+.tile img.fill {
+    max-height: 100%;
+    max-width: 100%;
+    width: 250px;
+    height: 190px;
+    transition: all 0.5s ease-out;
+}
+
+.tile:HOVER img.fill {
+    width: 270px;
+    height: 210px;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.tile .title {
+    background-color: rgba(255, 255, 255, .9);
+    font-size: 17px;
+    padding: 5px 0;
+    height: 25px;
+    bottom: 25px;
+    position: absolute;
+    width: 100%;
+}
+
+.tile .sub {
+    background-color: rgba(255, 255, 255, .9);
+    font-size: 11px;
+    padding: 3px 0;
+    height: 25px;
+    bottom: 0px;
+    position: absolute;
+    width: 100%;
+}
+
+.tile.turquoise {
+    background-color: #1abc9c;
+}
+
+.tile.steelblue {
+    background-color: #4B77BE;
+}
+
+.tile.capehoney {
+    background-color: #FDE3A7;
+}

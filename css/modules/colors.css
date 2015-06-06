@@ -12,12 +12,12 @@ a.button:hover {
 }
 
 .button.white {
-    background-color: #ffffff;
-    color: #34495E;
+    background-color: #ffffff !important;
+    color: #34495E !important;
 }
 
 .button.white:HOVER {
-    background-color: #e74c3c;
-    color: #ffffff;
+    background-color: #e74c3c !important;
+    color: #ffffff !important;
     transition: all 0.3s ease-out;
 }

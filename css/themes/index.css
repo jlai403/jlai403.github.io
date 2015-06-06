@@ -17,7 +17,7 @@ div.learn-more i.glyphicon-chevron-down {
     font-size: 10px;
 }
 
-.section .title {
+.section .heading {
     text-transform: uppercase;
     padding-left: 10px;
     margin-left: 50px;
@@ -26,12 +26,12 @@ div.learn-more i.glyphicon-chevron-down {
     font-weight: bolder;
 }
 
-.about.section .title {
+.about.section .heading {
     color: rgba(0, 0, 0, 0.25);
     border-left: 8px solid rgba(0, 0, 0, 0.25);
 }
 
-.skills.section .title {
+.skills.section .heading {
     color: rgba(255, 255, 255, 0.8);
     border-left: 8px solid rgba(255, 255, 255, 0.8);
 }
@@ -79,4 +79,20 @@ ul.skills li {
     color: rgba(255, 255, 255, 0.9);
     text-transform: uppercase;
     font-size: 1em;
+}
+
+#timeline .click-me {
+    font-size: 10px;
+    top: -2px;
+    position: relative;
+}
+
+.projects.section .heading {
+    color: rgba(0, 0, 0, 0.25);
+    border-left: 8px solid rgba(0, 0, 0, 0.25);
+}
+
+.blog.section .heading {
+    color: rgba(0, 0, 0, 0.25);
+    border-left: 8px solid rgba(0, 0, 0, 0.25);
 }
