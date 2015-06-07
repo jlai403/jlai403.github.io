@@ -72,13 +72,13 @@
         });
 
         $('#fullpage').fullpage({
-            sectionsColor: ['#ffffff', '#3498db', '#34495e', '#95a5a6', '#ecf0f1'],
-            anchors: ['', 'about', 'skills', 'projects', 'blog'],
+            sectionsColor: ['#ffffff', '#3498db', '#34495e', '#ecf0f1'],
+            anchors: ['', 'about', 'skills', 'projects'],
             continuousVertical: true,
             controlArrows: true,
             navigation: true,
             navigationPosition: 'right',
-            navigationTooltips: ['home', 'about', 'skills', 'projects', 'blog'],
+            navigationTooltips: ['home', 'about', 'skills', 'projects'],
             autoScrolling: false,
             fitToSection: false,
             afterLoad: function (anchorLink, index) {
@@ -94,9 +94,10 @@
                     break;
                 case "projects":
                     $(".projects.section .heading").removeClass("hidden").addClass("slideInLeft")
-                    break;
-                case "blog":
-                    $(".blog.section .heading").removeClass("hidden").addClass("slideInLeft")
+                    $(".projects.section .tile:first").removeClass("hidden").addClass("fadeIn one")
+                    $(".projects.section .tile:eq(1)").removeClass("hidden").addClass("fadeIn two")
+                    $(".projects.section .tile:eq(2)").removeClass("hidden").addClass("fadeIn four")
+                    $(".projects.section .tile:last").removeClass("hidden").addClass("fadeIn six")
                     break;
                 }
             }
@@ -121,9 +122,6 @@
                         </li>
                         <li>
                             <a class="nav-link" href="#projects">projects</a>
-                        </li>
-                        <li>
-                            <a class="nav-link" href="#blog">blog</a>
                         </li>
                         <li>
                             <a class="nav-link" href="mailto:joey@jlai.ca">contact</a>
@@ -364,7 +362,7 @@
             <div class="container" style="margin-top: 50px;">
                 <div class="col-lg-3 col-md-5 col-sm-6">
                     <a href="https://knelf.com" target="_blank">
-                        <div class="tile turquoise">
+                        <div class="tile turquoise hidden">
                             <img class="fill" src="img/Knelf-Screenshot.png" />
                             <h3 class="title">Knelf</h3>
                             <p class="sub">
@@ -376,7 +374,7 @@
 
                 <div class="col-lg-3 col-md-5 col-sm-6">
                     <a href="https://github.com/jlai403/COMP5590-Senior-Project" target="_blank">
-                        <div class="tile" style="background-color: rgba(234, 239, 240, 1);">
+                        <div class="tile hidden" style="background-color: rgba(234, 239, 240, 1);">
                             <img class="fill-width " src="img/COMP550-Screenshot.png " />
                             <h3 class="title">COMP5590</h3>
                             <p class="sub">
@@ -388,7 +386,7 @@
 
                 <div class="col-lg-3 col-md-5 col-sm-6">
                     <a href="https://github.com/jlai403/pCarsCommunity" target="_blank">
-                        <div class="tile steelblue">
+                        <div class="tile steelblue hidden">
                             <img class="fill-width center" src="img/ProjectCARS_Official_Logo.png" style="padding: 0 10px;" />
                             <h3 class="title">Project CARS</h3>
                             <p class="sub">
@@ -400,7 +398,7 @@
 
                 <div class="col-lg-3 col-md-5 col-sm-6">
                     <a href="https://github.com/jlai403">
-                        <div class="tile capehoney">
+                        <div class="tile capehoney hidden">
                             <img class="fill" src="img/Github-Screenshot.png" target="_blank"/>
                             <h3 class="title">GitHub</h3>
                             <p class="sub">
@@ -410,10 +408,6 @@
                     </a>
                 </div>
             </div>
-        </div>
-
-        <div class="blog section ">
-            <div class="heading hidden ">blog</div>
         </div>
 
 
