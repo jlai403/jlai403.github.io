@@ -1,0 +1,36 @@
+body {
+    font-family: 'Helvetica Neue', 'Helvetica', 'Open Sans', 'Arial', 'sans-serif' !important;
+}
+
+.center.text {
+    text-align: center;
+}
+
+a,
+a:link,
+a:active,
+a:hover,
+a:visited {
+    text-decoration: none;
+    background-color: transparent !important;
+    font-weight: normal !important;
+}
+
+a.nav-link,
+a.nav-link:link,
+a.nav-link:active,
+a.nav-link:hover,
+a.nav-link:visited {
+    text-decoration: none;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    color: #354b60;
+    text-transform: uppercase;
+    background-color: transparent !important;
+}
+
+a.nav-link:hover {
+    text-decoration: none;
+    transition: color 1s ease;
+    color: #e74c3c !important;
+}

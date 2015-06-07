@@ -1,0 +1,110 @@
+div.header {
+    height: 300px;
+    text-align: center;
+}
+
+div.header .title {
+    font-family: "Lato";
+    font-size: 50px;
+    font-weight: bolder;
+    margin: 50px auto 10px;
+}
+
+div.header .sub-title {
+    font-family: "Lato";
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 480px) {
+    div.header {
+        margin-top: -250px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    div.header .title {
+        font-size: 45px;
+    }
+    div.header .sub-title {
+        font-size: 18px;
+    }
+}
+
+div.header nav.main {
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+div.header nav.mobile {
+    display: none;
+    margin-bottom: 35px;
+}
+
+@media screen and (max-width: 768px) {
+    div.header nav.main {
+        display: none;
+    }
+    div.header nav.mobile {
+        display: block;
+    }
+}
+
+div.header .social {
+    font-size: 20px;
+}
+
+div.header .social a,
+div.header .social a:link,
+div.header .social a:active,
+div.header .social a:visited {
+    text-decoration: none;
+    color: #000000;
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    line-height: 1.5;
+    border-radius: 8px;
+    margin: 0 2px;
+}
+
+div.header .social a:hover {
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+div.header .social .facebook:hover {
+    background-color: #3b5998 !important;
+    color: #ffffff;
+}
+
+div.header .social .linkedin:hover {
+    background-color: #0976b4 !important;
+    color: #ffffff;
+}
+
+div.header .social .github:hover {
+    background-color: #666666 !important;
+    color: #ffffff;
+}
+
+div.header .social .stackoverflow:hover {
+    background-color: #eeeeee !important;
+    color: #fe7a15;
+}
+
+div.header .social .instagram:hover {
+    background-color: #3f729b !important;
+    color: #dfe6ed;
+}
+
+div.header .social .twitter:hover {
+    background-color: #55acee !important;
+    color: #ffffff;
+}
+
+div.header .social .google:hover {
+    background-color: #dd4b39 !important;
+    color: #ffffff;
+}
