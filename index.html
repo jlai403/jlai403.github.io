@@ -40,7 +40,7 @@
     <link rel="stylesheet" href="css/themes/index.css" />
     <link rel="stylesheet" href="css/modules/tiles.css" />
 
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,500|Open+Sans+Condensed:300|Lato' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700|Lato:400,700|Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
     <!-- end stylesheets/scripts -->
 
     <!-- start analytics -->
@@ -71,13 +71,13 @@
         });
 
         $('#fullpage').fullpage({
-            sectionsColor: ['#ffffff', '#3498db', '#34495e', '#ecf0f1'],
-            anchors: ['', 'about', 'skills', 'projects'],
+            sectionsColor: ['#ffffff', '#3498db', '#34495e', '#ecf0f1', '#ffffff'],
+            anchors: ['', 'about', 'skills', 'projects', 'blog'],
             continuousVertical: true,
             controlArrows: true,
             navigation: true,
             navigationPosition: 'right',
-            navigationTooltips: ['home', 'about', 'skills', 'projects'],
+            navigationTooltips: ['home', 'about', 'skills', 'projects', 'blog'],
             autoScrolling: false,
             fitToSection: false,
             afterLoad: function (anchorLink, index) {
@@ -97,6 +97,8 @@
                     $(".projects.section .tile:eq(1)").removeClass("hidden").addClass("fadeIn two")
                     $(".projects.section .tile:eq(2)").removeClass("hidden").addClass("fadeIn four")
                     $(".projects.section .tile:last").removeClass("hidden").addClass("fadeIn six")
+                    break;
+                case "blog":
                     break;
                 }
             }
@@ -121,6 +123,9 @@
                         </li>
                         <li>
                             <a class="nav-link" href="#projects">projects</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="#blog">blog</a>
                         </li>
                         <li>
                             <a class="nav-link" href="mailto:joey@jlai.ca">contact</a>
@@ -407,6 +412,10 @@
                     </a>
                 </div>
             </div>
+        </div>
+        
+        <div class="blog-summary section">
+            
         </div>
 
 
