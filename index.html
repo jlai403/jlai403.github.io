@@ -38,9 +38,10 @@
     <link rel="stylesheet" href="css/modules/fullpage-overrides.css" />
     <link rel="stylesheet" href="css/modules/timeline.css" />
     <link rel="stylesheet" href="css/themes/index.css" />
+
     <link rel="stylesheet" href="css/modules/tiles.css" />
 
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,500|Open+Sans+Condensed:300|Lato' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700|Lato:400,700|Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
     <!-- end stylesheets/scripts -->
 
     <!-- start analytics -->
@@ -98,6 +99,8 @@
                     $(".projects.section .tile:eq(2)").removeClass("hidden").addClass("fadeIn four")
                     $(".projects.section .tile:last").removeClass("hidden").addClass("fadeIn six")
                     break;
+                case "blog":
+                    break;
                 }
             }
         });
@@ -121,6 +124,9 @@
                         </li>
                         <li>
                             <a class="nav-link" href="#projects">projects</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="#blog">blog</a>
                         </li>
                         <li>
                             <a class="nav-link" href="mailto:joey@jlai.ca">contact</a>
@@ -408,8 +414,7 @@
                 </div>
             </div>
         </div>
-
-
+    
         <footer>
             © 2015, Joey Lai, All rights reserved.
             <br/> Hosted on <a href="http://www.github.com " target="_blank ">GitHub</a>, Powered by <a href="http://www.jekyllrb.com " target="_blank ">Jekyll</a>
