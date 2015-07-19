@@ -72,13 +72,13 @@
         });
 
         $('#fullpage').fullpage({
-            sectionsColor: ['#ffffff', '#3498db', '#34495e', '#ecf0f1', '#ffffff'],
-            anchors: ['', 'about', 'skills', 'projects', 'blog'],
+            sectionsColor: ['#fafafa', '#3498db', '#34495e', '#ecf0f1'],
+            anchors: ['', 'about', 'skills', 'projects'],
             continuousVertical: true,
             controlArrows: true,
             navigation: true,
             navigationPosition: 'right',
-            navigationTooltips: ['home', 'about', 'skills', 'projects', 'blog'],
+            navigationTooltips: ['home', 'about', 'skills', 'projects'],
             autoScrolling: false,
             fitToSection: false,
             afterLoad: function (anchorLink, index) {
@@ -126,9 +126,6 @@
                             <a class="nav-link" href="#projects">projects</a>
                         </li>
                         <li>
-                            <a class="nav-link" href="#blog">blog</a>
-                        </li>
-                        <li>
                             <a class="nav-link" href="mailto:joey@jlai.ca">contact</a>
                         </li>
                     </ul>
@@ -138,9 +135,8 @@
                         <option value="-1" selected>menu</option>
                         <option value="1" data-href="#about">about</option>
                         <option value="2" data-href="#skills">skills</option>
-                        <option value="4" data-href="#projects">projects</option>
-                        <option value="3" data-href="#blog">blog</option>
-                        <option value="5" data-href="#contact">contact</option>
+                        <option value="3" data-href="#projects">projects</option>
+                        <option value="4" data-href="#contact">contact</option>
                     </select>
                 </nav>
                 <div class="social">
@@ -414,12 +410,7 @@
                 </div>
             </div>
         </div>
-        
-        <div class="blog-summary section">
-            
-        </div>
-
-
+    
         <footer>
             © 2015, Joey Lai, All rights reserved.
             <br/> Hosted on <a href="http://www.github.com " target="_blank ">GitHub</a>, Powered by <a href="http://www.jekyllrb.com " target="_blank ">Jekyll</a>
