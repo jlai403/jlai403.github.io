@@ -1,0 +1,98 @@
+div.learn-more {
+    position: absolute;
+    bottom: 5%;
+    width: 100%;
+    text-align: center;
+}
+
+p.learn-more {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-family: "Lato";
+    font-weight: bolder;
+    margin: 15px;
+}
+
+div.learn-more i.glyphicon-chevron-down {
+    font-size: 10px;
+}
+
+.section .heading {
+    text-transform: uppercase;
+    padding-left: 10px;
+    margin-left: 50px;
+    font-size: 40px;
+    line-height: 1.75;
+    font-weight: bolder;
+}
+
+.about.section .heading {
+    color: rgba(0, 0, 0, 0.25);
+    border-left: 8px solid rgba(0, 0, 0, 0.25);
+}
+
+.skills.section .heading {
+    color: rgba(255, 255, 255, 0.8);
+    border-left: 8px solid rgba(255, 255, 255, 0.8);
+}
+
+.about .container {
+    margin-top: 35px;
+}
+
+.about h2 {
+    padding: 0;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.30);
+    font-weight: bolder;
+    font-size: 18px;
+}
+
+.about h3 {
+    color: #eeeeee;
+}
+
+.skills .container {
+    margin-top: 35px;
+}
+
+.skills h2 {
+    padding: 0;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: bolder;
+    font-size: 18px;
+}
+
+ul.skills {
+    list-style: disc;
+    color: rgba(189, 195, 199, 0.7);
+    padding: 20px;
+}
+
+ul.skills li {
+    font-weight: 500;
+    padding: 5px 0;
+}
+
+#timeline label {
+    color: rgba(255, 255, 255, 0.9);
+    text-transform: uppercase;
+    font-size: 1em;
+}
+
+#timeline .click-me {
+    font-size: 10px;
+    top: -2px;
+    position: relative;
+}
+
+.projects.section .heading {
+    color: rgba(0, 0, 0, 0.25);
+    border-left: 8px solid rgba(0, 0, 0, 0.25);
+}
+
+.blog.section .heading {
+    color: rgba(0, 0, 0, 0.25);
+    border-left: 8px solid rgba(0, 0, 0, 0.25);
+}
