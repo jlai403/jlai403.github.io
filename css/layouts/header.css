@@ -108,3 +108,8 @@ div.header .social .google:hover {
     background-color: #dd4b39 !important;
     color: #ffffff;
 }
+
+div.header .social .pinterest:hover {
+    background-color: #bd081c !important;
+    color: #ffffff;
+}
