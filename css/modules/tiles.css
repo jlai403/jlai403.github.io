@@ -10,9 +10,7 @@
 }
 
 .tile:HOVER {
-    height: 270px;
-    width: 270px;
-    top: -10px;
+    transform: scale(1.04);
     transition: all 0.5s ease-out;
 }
 
@@ -28,18 +26,9 @@
     transition: all 0.5s ease-out;
 }
 
-.tile:HOVER img.fill-width {
-    width: 270px;
-    max-width: 100%;
-}
-
 .tile img.fill-width.center {
     top: 40%;
     transform: translateY(-50%);
-}
-
-.tile:HOVER img.fill-width.center {
-    top: 40%;
 }
 
 .tile img.fill {
@@ -48,13 +37,6 @@
     width: 250px;
     height: 190px;
     transition: all 0.5s ease-out;
-}
-
-.tile:HOVER img.fill {
-    width: 270px;
-    height: 210px;
-    max-width: 100%;
-    max-height: 100%;
 }
 
 .tile .title {

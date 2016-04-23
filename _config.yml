@@ -4,5 +4,5 @@ url: "http://jlai.ca"
 
 paginate: 10
 
-markdown: rdiscount
+markdown: kramdown
 permalink: pretty
