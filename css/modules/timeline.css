@@ -124,16 +124,17 @@ label {
     transition: max-height 0.4s linear, border-color 0.5s linear, transform 0.2s linear;
 }
 
+.radio:checked ~ .content p {
+    max-height: 200px;
+    color: #dddddd;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    transition: color 0.3s linear 0.3s;
+}
 .radio:checked ~ .content:after {
     border-right-color: #34495E;
 }
 
-.radio:checked ~ .content p {
-    max-height: 200px;
-    color: #dddddd;
-    transition: all 0.3s linear 0.3s;
-    font-size: 0.8em;
-}
 /* -------------------------------------
  * mobile phones (vertical version only)
  * ------------------------------------- */
