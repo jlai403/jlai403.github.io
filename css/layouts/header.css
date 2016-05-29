@@ -4,14 +4,14 @@ div.header {
 }
 
 div.header .title {
-    font-family: "Lato";
+    font-family: "Raleway";
     font-size: 50px;
-    font-weight: bolder;
+    font-weight: 600;
     margin: 50px auto 10px;
 }
 
 div.header .sub-title {
-    font-family: "Lato";
+    font-family: "Raleway";
     font-size: 20px;
     margin-bottom: 10px;
 }
