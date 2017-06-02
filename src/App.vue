@@ -61,6 +61,7 @@ export default {
 <style lang="scss">
 $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
+@import "styles/layout.scss";
 
 #homepage {
     font-family: 'Avenir', 'Open Sans', Helvetica, Arial, sans-serif;
