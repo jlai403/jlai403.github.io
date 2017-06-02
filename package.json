@@ -17,6 +17,7 @@
   "author": "Joey Lai <joey@jlai.ca>",
   "license": "MIT",
   "dependencies": {
+    "copy-webpack-plugin": "^4.0.1",
     "vue": "^2.1.10",
     "vue-router": "^2.2.0"
   },
