@@ -62,6 +62,7 @@ export default {
 $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
 @import "styles/layout.scss";
+@import "styles/variables/colors.scss";
 
 #homepage {
     font-family: 'Avenir', 'Open Sans', Helvetica, Arial, sans-serif;
@@ -121,35 +122,35 @@ $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
                 }
             }
             .facebook:hover {
-                background-color: #3b5998 !important;
+                background-color: $color-facebook !important;
                 color: #ffffff;
             }
             .linkedin:hover {
-                background-color: #0976b4 !important;
+                background-color: $color-linkedin !important;
                 color: #ffffff;
             }
             .github:hover {
-                background-color: #666666 !important;
+                background-color: $color-github !important;
                 color: #ffffff;
             }
             .stackoverflow:hover {
-                background-color: #eeeeee !important;
-                color: #fe7a15;
+                background-color: $color-stackoverflow-bg !important;
+                color: $color-stackoverflow;
             }
             .instagram:hover {
-                background-color: #3f729b !important;
-                color: #dfe6ed;
+                background-color: $color-instagram-bg !important;
+                color: $color-instagram;
             }
             .twitter:hover {
-                background-color: #55acee !important;
+                background-color: $color-twitter !important;
                 color: #ffffff;
             }
             .google:hover {
-                background-color: #dd4b39 !important;
+                background-color: $color-google-plus !important;
                 color: #ffffff;
             }
             .pinterest:hover {
-                background-color: #bd081c !important;
+                background-color: $color-pinterest !important;
                 color: #ffffff;
             }
         }
