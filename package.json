@@ -17,11 +17,12 @@
   "author": "Joey Lai <joey@jlai.ca>",
   "license": "MIT",
   "dependencies": {
-    "copy-webpack-plugin": "^4.0.1",
+    "font-awesome": "^4.7.0",
     "vue": "^2.1.10",
     "vue-router": "^2.2.0"
   },
   "devDependencies": {
+    "copy-webpack-plugin": "^4.0.1",
     "autoprefixer": "^6.7.2",
     "babel-core": "^6.22.1",
     "babel-eslint": "^7.1.1",
