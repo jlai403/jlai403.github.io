@@ -1,7 +1,5 @@
 <template>
 <div id="homepage">
-  <!-- <router-link to="/">Home</router-link> -->
-  <!-- <router-view></router-view> -->
   <div class="header">
     <h1 class="title">.jlai</h1>
     <div class="sub-title">software developer & lifelong learner</div>
@@ -9,16 +7,16 @@
     <nav class="main">
       <ul class="nav navbar-nav">
         <li>
-          <a class="nav-link" href="#about">about</a>
+          <router-link to="/about" class="nav-link">about</router-link>
         </li>
         <li>
-          <a class="nav-link" href="#skills">skills</a>
+          <router-link to="/about" class="nav-link">skills</router-link>
         </li>
         <li>
-          <a class="nav-link" href="#projects">projects</a>
+          <router-link to="/about" class="nav-link">projects</router-link>
         </li>
         <li>
-          <a class="nav-link" href="mailto:joey@jlai.ca">contact</a>
+          <router-link to="/about" class="nav-link">contact</router-link>
         </li>
       </ul>
     </nav>
@@ -49,6 +47,8 @@
       </a>
     </div>
   </div>
+
+  <router-view></router-view>
 </div>
 </template>
 
@@ -151,21 +151,6 @@ $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
             .pinterest:hover {
                 background-color: #bd081c !important;
                 color: #ffffff;
-            }
-        }
-    }
-    @media screen and (max-width: 480px) {
-        div.header {
-            margin-top: -250px;
-        }
-    }
-    @media screen and (max-width: 320px) {
-        div.header {
-            .title {
-                font-size: 45px;
-            }
-            .sub-title {
-                font-size: 18px;
             }
         }
     }
