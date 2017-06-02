@@ -59,6 +59,9 @@ export default {
 </script>
 
 <style lang="scss">
+$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+
 #homepage {
     font-family: 'Avenir', 'Open Sans', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
