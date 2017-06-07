@@ -122,35 +122,35 @@ $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
                 }
             }
             .facebook:hover {
-                background-color: $color-facebook !important;
+                background: $color-facebook !important;
                 color: #ffffff;
             }
             .linkedin:hover {
-                background-color: $color-linkedin !important;
+                background: $color-linkedin !important;
                 color: #ffffff;
             }
             .github:hover {
-                background-color: $color-github !important;
+                background: $color-github !important;
                 color: #ffffff;
             }
             .stackoverflow:hover {
-                background-color: $color-stackoverflow-bg !important;
+                background: $color-stackoverflow-bg !important;
                 color: $color-stackoverflow;
             }
             .instagram:hover {
-                background-color: $color-instagram-bg !important;
-                color: $color-instagram;
+                background: $color-instagram-bg !important;
+                color: #ffffff;
             }
             .twitter:hover {
-                background-color: $color-twitter !important;
+                background: $color-twitter !important;
                 color: #ffffff;
             }
             .google:hover {
-                background-color: $color-google-plus !important;
+                background: $color-google-plus !important;
                 color: #ffffff;
             }
             .pinterest:hover {
-                background-color: $color-pinterest !important;
+                background: $color-pinterest !important;
                 color: #ffffff;
             }
         }
