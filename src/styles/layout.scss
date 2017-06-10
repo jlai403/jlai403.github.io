@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Condensed|Raleway');
+
 body {
   font-family: 'Raleway', 'Open Sans', 'Helvetica Neue', 'Arial', 'sans-serif' !important;
 }
@@ -22,7 +24,8 @@ a {
 
   &.nav-link {
     text-decoration: none;
-    font-size: 14px !important;
+    font-family: 'Roboto Condensed';
+    font-size: 1.5rem !important;
     font-weight: 700 !important;
     color: #354b60;
     text-transform: uppercase;
@@ -33,7 +36,8 @@ a {
     &:link,
     &:visited {
       text-decoration: none;
-      font-size: 14px !important;
+      font-family: 'Roboto Condensed';
+      font-size: 1.5rem !important;
       font-weight: 700 !important;
       color: #354b60;
       text-transform: uppercase;

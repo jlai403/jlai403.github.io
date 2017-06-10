@@ -1,10 +1,10 @@
 <template>
-<div id="homepage">
+<div id="homepage" class="flexbox">
   <div class="header">
-    <h1 class="title">.jlai</h1>
+    <h1 class="title">joey lai</h1>
     <div class="sub-title">software developer & lifelong learner</div>
 
-    <nav class="main">
+    <div class="main">
       <ul class="nav navbar-nav">
         <li>
           <router-link to="/about" class="nav-link">about</router-link>
@@ -19,7 +19,7 @@
           <router-link to="/about" class="nav-link">contact</router-link>
         </li>
       </ul>
-    </nav>
+    </div>
     <div class="social">
       <a class="facebook" href="https://facebook.com/joey.lai" target="_blank">
         <i class="fa fa-facebook"></i>
@@ -64,55 +64,65 @@ $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
 @import "styles/layout.scss";
 @import "styles/variables/colors.scss";
 
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
 #homepage {
-    font-family: 'Avenir', 'Open Sans', Helvetica, Arial, sans-serif;
+    font-family: 'Roboto Condesed', 'Avenir', 'Open Sans', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
-    margin-top: 60px;
 
-    div.header {
-        height: 300px;
+    &.flexbox {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      height: 100%;
+      width: 100%;
+    }
+
+    .header {
+        margin-top: -5rem;
         text-align: center;
         .title {
-            font-family: "Raleway";
-            font-size: 50px;
-            font-weight: 600;
-            margin: 50px auto 10px;
+            font-family: 'Roboto Condensed';
+            font-size: 3rem;
+            text-transform: uppercase;
         }
         .sub-title {
-            font-family: "Raleway";
-            font-size: 20px;
+            font-family: 'Roboto Condensed';
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        .main {
+            display: inline-block;
+            text-align: center;
             margin-bottom: 10px;
         }
-        nav {
-            &.main {
-                display: inline-block;
-                text-align: center;
-                margin-bottom: 10px;
-            }
-        }
         .social {
-            font-size: 20px;
+            font-size: 1.35rem;
             a {
                 text-decoration: none;
-                color: #000000;
+                color: #2c3e50;
                 display: inline-block;
                 height: 30px;
                 width: 30px;
-                line-height: 1.5;
+                line-height: 2.5;
                 border-radius: 8px;
                 margin: 0 2px;
                 &:active,
                 &:link,
                 &:visited {
                     text-decoration: none;
-                    color: #000000;
+                    color: #2c3e50;
                     display: inline-block;
                     height: 30px;
                     width: 30px;
-                    line-height: 1.5;
+                    line-height: 2.5;
                     border-radius: 8px;
                     margin: 0 2px;
                 }
