@@ -1,50 +1,28 @@
 <template>
-<div id="homepage" class="flexbox">
-  <div class="header">
-    <h1 class="title">joey lai</h1>
-    <div class="sub-title">software developer & lifelong learner</div>
-
+<div id="homepage" class="container-fluid">
+  <div class="landing row-fluid">
     <div class="main">
-      <ul class="nav navbar-nav">
-        <li>
-          <router-link to="/about" class="nav-link">about</router-link>
-        </li>
-        <li>
-          <router-link to="/about" class="nav-link">skills</router-link>
-        </li>
-        <li>
-          <router-link to="/about" class="nav-link">projects</router-link>
-        </li>
-        <li>
-          <router-link to="/about" class="nav-link">contact</router-link>
-        </li>
-      </ul>
+      <h1 class="title">joey lai</h1>
+      <div class="sub-title">software developer & lifelong learner</div>
     </div>
-    <div class="social">
-      <a class="facebook" href="https://facebook.com/joey.lai" target="_blank">
-        <i class="fa fa-facebook"></i>
-      </a>
-      <a class="linkedin" href="https://ca.linkedin.com/in/jlai403" target="_blank">
-        <i class="fa fa-linkedin"></i>
-      </a>
-      <a class="github" href="https://github.com/jlai403" target="_blank">
-        <i class="fa fa-github"></i>
-      </a>
-      <a class="stackoverflow" href="http://stackoverflow.com/users/2060484/joey" target="_blank">
-        <i class="fa fa-stack-overflow"></i>
-      </a>
-      <a class="instagram" href="https://instagram.com/_jlai/" target="_blank">
-        <i class="fa fa-instagram"></i>
-      </a>
-      <a class="twitter" href="https://twitter.com/jlai_" target="_blank">
-        <i class="fa fa-twitter"></i>
-      </a>
-      <a class="google" href="https://google.com/+jlai403" target="_blank">
-        <i class="fa fa-google-plus"></i>
-      </a>
-      <a class="pinterest" href="https://www.pinterest.com/jlai403/" target="_blank">
-        <i class="fa fa-pinterest-p"></i>
-      </a>
+
+    <div class="nav">
+      <div class="nav-links">
+        <router-link to="/about" class="nav-link">about</router-link>
+        <router-link to="/about" class="nav-link">skills</router-link>
+        <router-link to="/about" class="nav-link">projects</router-link>
+        <router-link to="/about" class="nav-link">contact</router-link>
+      </div>
+      <div class="social">
+        <a class="facebook" href="https://facebook.com/joey.lai" target="_blank"> <i class="fa fa-facebook"></i> </a>
+        <a class="linkedin" href="https://ca.linkedin.com/in/jlai403" target="_blank"> <i class="fa fa-linkedin"></i> </a>
+        <a class="github" href="https://github.com/jlai403" target="_blank"> <i class="fa fa-github"></i> </a>
+        <a class="stackoverflow" href="http://stackoverflow.com/users/2060484/joey" target="_blank"> <i class="fa fa-stack-overflow"></i> </a>
+        <a class="instagram" href="https://instagram.com/_jlai/" target="_blank"> <i class="fa fa-instagram"></i> </a>
+        <a class="twitter" href="https://twitter.com/jlai_" target="_blank"> <i class="fa fa-twitter"></i> </a>
+        <a class="google" href="https://google.com/+jlai403" target="_blank"> <i class="fa fa-google-plus"></i> </a>
+        <a class="pinterest" href="https://www.pinterest.com/jlai403/" target="_blank"> <i class="fa fa-pinterest-p"></i> </a>
+      </div>
     </div>
   </div>
 
@@ -64,9 +42,10 @@ $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
 @import "styles/layout.scss";
 @import "styles/variables/colors.scss";
 
-html, body {
-  height: 100%;
-  width: 100%;
+body,
+html {
+    height: 100%;
+    width: 100%;
 }
 
 #homepage {
@@ -76,34 +55,44 @@ html, body {
     text-align: center;
     color: #2c3e50;
 
-    &.flexbox {
-      align-items: center;
-      display: flex;
-      justify-content: center;
-      height: 100%;
-      width: 100%;
+    &.container-fluid {
+        padding: 0;
     }
 
-    .header {
-        margin-top: -5rem;
+    .landing {
+        @extend .col-md-12;
+
         text-align: center;
-        .title {
-            font-family: 'Roboto Condensed';
-            font-size: 3rem;
-            text-transform: uppercase;
-        }
-        .sub-title {
-            font-family: 'Roboto Condensed';
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-        }
+        border-bottom: 1px solid transparent;
+
         .main {
-            display: inline-block;
-            text-align: center;
-            margin-bottom: 10px;
+          @extend .col-xs-12;
+
+          .title {
+              @extend .col-xs-12;
+              font-family: 'Roboto Condensed';
+              font-size: 3rem;
+              text-transform: uppercase;
+          }
+
+          .sub-title {
+              font-family: 'Roboto Condensed';
+              font-size: 1.5rem;
+              margin-bottom: 10px;
+              text-transform: uppercase;
+          }
+        }
+
+        .nav {
+            @extend .col-xs-12;
+
+            .nav-link {
+              @extend .col-xs-3;
+            }
         }
         .social {
+            @extend .col-xs-12;
+
             font-size: 1.35rem;
             a {
                 text-decoration: none;
@@ -164,6 +153,38 @@ html, body {
                 color: #ffffff;
             }
         }
+
+        &:hover {
+            transition: all 2s ease;
+
+            background-color: #fbfbfb;
+            border-bottom: 1px solid #efefef;
+            margin-top: 0;
+
+            .main {
+              @extend .col-md-4;
+              transition: all 2s ease;
+              .title {
+                margin: 1.5rem 0;
+              }
+
+              .sub-title {
+                display: none;
+              }
+            }
+
+            .nav {
+              @extend .col-md-4;
+              transition: all 2s ease;
+              margin-top: 2.25rem;
+              @include make-md-column-offset(4);
+
+              .social {
+                display: none;
+              }
+            }
+        }
     }
+
 }
 </style>
