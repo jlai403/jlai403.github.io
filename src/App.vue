@@ -1,5 +1,5 @@
 <template>
-<div id="homepage" class="container-fluid">
+<div id="homepage" class="container-fluid flexbox">
   <div class="landing row-fluid">
     <div class="main">
       <h1 class="title">joey lai</h1>
@@ -55,6 +55,14 @@ html {
     text-align: center;
     color: #2c3e50;
 
+    &.flexbox {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      height: 100%;
+      width: 100%;
+    }
+
     &.container-fluid {
         padding: 0;
     }
@@ -62,8 +70,10 @@ html {
     .landing {
         @extend .col-md-12;
 
-        text-align: center;
         border-bottom: 1px solid transparent;
+        max-width: 500px;
+        text-align: center;
+        margin-top: -10rem;
 
         .main {
           @extend .col-xs-12;
@@ -94,6 +104,8 @@ html {
             @extend .col-xs-12;
 
             font-size: 1.35rem;
+            margin-top: 1rem;
+
             a {
                 text-decoration: none;
                 color: #2c3e50;
@@ -114,10 +126,6 @@ html {
                     line-height: 2.5;
                     border-radius: 8px;
                     margin: 0 2px;
-                }
-                &:hover {
-                    text-decoration: none;
-                    transition: all 0.5s ease;
                 }
             }
             .facebook:hover {
@@ -151,37 +159,6 @@ html {
             .pinterest:hover {
                 background: $color-pinterest !important;
                 color: #ffffff;
-            }
-        }
-
-        &:hover {
-            transition: all 2s ease;
-
-            background-color: #fbfbfb;
-            border-bottom: 1px solid #efefef;
-            margin-top: 0;
-
-            .main {
-              @extend .col-md-4;
-              transition: all 2s ease;
-              .title {
-                margin: 1.5rem 0;
-              }
-
-              .sub-title {
-                display: none;
-              }
-            }
-
-            .nav {
-              @extend .col-md-4;
-              transition: all 2s ease;
-              margin-top: 2.25rem;
-              @include make-md-column-offset(4);
-
-              .social {
-                display: none;
-              }
             }
         }
     }
