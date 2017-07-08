@@ -16,5 +16,9 @@ body,
 html {
     height: 100%;
     width: 100%;
+
+    font-family: 'Roboto Condesed', 'Avenir', 'Open Sans', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 </style>
