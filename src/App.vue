@@ -1,6 +1,9 @@
 <template>
-<div id="homepage" class="container-fluid flexbox">
-  <div class="landing row-fluid">
+<div id="homepage" class="container-fluid flexbox hero-image">
+
+  <div class="blur"></div>
+
+  <div class="content row-fluid">
     <div class="main">
       <h1 class="title">joey lai</h1>
       <div class="sub-title">software developer & lifelong learner</div>
@@ -24,6 +27,8 @@
         <a class="pinterest" href="https://www.pinterest.com/jlai403/" target="_blank"> <i class="fa fa-pinterest-p"></i> </a>
       </div>
     </div>
+    <div class="main-background"></div>
+
   </div>
 
   <router-view></router-view>
@@ -67,27 +72,52 @@ html {
         padding: 0;
     }
 
-    .landing {
+    &.hero-image {
+        background-image: url('https://source.unsplash.com/random');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+
+    .blur {
+      @extend .col-md-12;
+      height: 270px;
+      max-width: 650px;
+      margin-top: -2.5rem;
+      position: absolute;
+
+      background: url('https://source.unsplash.com/random') no-repeat center center fixed;
+      background-size: cover;
+      overflow: hidden;
+      filter: blur(15px);
+    }
+
+    .content {
         @extend .col-md-12;
 
-        border-bottom: 1px solid transparent;
-        max-width: 500px;
+        border: 1px solid #aaaaaa;
+        margin-top: -5rem;
+        max-width: 650px;
+        padding: 4rem;
         text-align: center;
-        margin-top: -10rem;
+        background: rgba(255, 255, 255, 0.5);
 
         .main {
           @extend .col-xs-12;
+          position: relative;
 
           .title {
               @extend .col-xs-12;
               font-family: 'Roboto Condensed';
-              font-size: 3rem;
+              font-size: 4.5rem;
               text-transform: uppercase;
+              color: #333333;
           }
 
           .sub-title {
               font-family: 'Roboto Condensed';
-              font-size: 1.5rem;
+              font-size: 1.75rem;
               margin-bottom: 10px;
               text-transform: uppercase;
           }
@@ -98,13 +128,13 @@ html {
 
             .nav-link {
               @extend .col-xs-3;
+              margin: 1rem 0;
             }
         }
         .social {
             @extend .col-xs-12;
 
-            font-size: 1.35rem;
-            margin-top: 1rem;
+            font-size: 1.75rem;
 
             a {
                 text-decoration: none;
@@ -112,7 +142,6 @@ html {
                 display: inline-block;
                 height: 30px;
                 width: 30px;
-                line-height: 2.5;
                 border-radius: 8px;
                 margin: 0 2px;
                 &:active,
@@ -123,7 +152,7 @@ html {
                     display: inline-block;
                     height: 30px;
                     width: 30px;
-                    line-height: 2.5;
+                    line-height: 2;
                     border-radius: 8px;
                     margin: 0 2px;
                 }
