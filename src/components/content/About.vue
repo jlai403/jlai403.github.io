@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="about">
     ABOUT
   </div>
 </template>
@@ -15,4 +15,6 @@ export default {
 
 <style style="scss" scoped>
 
+#about {
+}
 </style>
