@@ -46,8 +46,13 @@ $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
 @import "../styles/layout.scss";
 @import "../styles/variables/colors.scss";
 
-.fade-enter-active, .fade-leave-active {
+.fade-leave-active {
     transition: opacity 1.5s;
+}
+
+.fade-enter-active {
+    transition: opacity 1.5s;
+    transition-delay: 1s;
 }
 
 .fade-enter, .fade-leave-to {
