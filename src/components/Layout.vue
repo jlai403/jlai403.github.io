@@ -2,10 +2,9 @@
   <transition name="fade">
     <div id="layout">
       <nav class="navbar">
-        <div class="header">
-          <router-link to="/"><div class="title">joey lai</div></router-link>
-        </div>
         <div class="nav-links">
+          <div class="col-xs-2"></div>
+          <router-link to="/" class="nav-link">home</router-link>
           <router-link to="/about" class="nav-link">about</router-link>
           <router-link to="/skills" class="nav-link">skills</router-link>
           <router-link to="/projects" class="nav-link">projects</router-link>
@@ -72,22 +71,12 @@ $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
       align-items: center;
     }
 
-    .header {
-      @extend .col-sm-9;
-
-      .title {
-          font-family: 'Roboto Condensed';
-          text-transform: uppercase;
-          color: #2c3e50;
-          font-size: 2rem !important;
-      }
-    }
-
     .nav-links {
-      @extend .col-sm-3;
+      @include make-sm-column-offset(8);
+      @extend .col-sm-4;
 
       .nav-link {
-          @extend .col-sm-3;
+          @extend .col-xs-2;
           margin: 1rem 0;
           font-size: 1.25rem !important;
           display: inline;
