@@ -1,6 +1,5 @@
 <template>
   <div id="about">
-    <!-- <h1 class="title">about</h1> -->
     <div class="container">
       <div class="name row">
         <div class="name">Joey Lai</div>
@@ -48,9 +47,13 @@
         <div class="two wide col">
           <div class="block">
             <div class="header">currently developing in</div>
-            <div class="value"> Node.js • Mongo • SSIS • T-SQL </div>
+            <div class="value"> Node.js • MongoDB • SSIS • T-SQL </div>
           </div>
         </div>
+      </div>
+
+      <div class="row">
+        do something here...
       </div>
     </div>
   </div>
@@ -121,12 +124,12 @@ $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
         }
 
         .header {
-          font-size: 1.25rem;
+          font-size: 1.35rem;
           text-transform: lowercase;
         }
 
         .value {
-          font-size: 1.5rem;
+          font-size: 1.25rem;
           font-weight: 700;
           color: #00b96a;
         }

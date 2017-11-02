@@ -1,18 +1,17 @@
 <template>
   <transition name="fade">
     <div id="layout">
-      <nav class="navbar">
-        <div class="nav-links">
-          <div class="col-xs-2"></div>
-          <router-link to="/" class="nav-link">home</router-link>
-          <router-link to="/about" class="nav-link">about</router-link>
-          <router-link to="/skills" class="nav-link">skills</router-link>
-          <router-link to="/projects" class="nav-link">projects</router-link>
-          <router-link to="/contact" class="nav-link">contact</router-link>
-        </div>
-      </nav>
-
       <div class="container wrapper">
+        <nav class="navbar">
+          <div class="nav-links">
+            <div class="col-xs-2"></div>
+            <router-link to="/" class="nav-link">home</router-link>
+            <router-link to="/about" class="nav-link">about</router-link>
+            <router-link to="/skills" class="nav-link">skills</router-link>
+            <router-link to="/projects" class="nav-link">projects</router-link>
+            <router-link to="/contact" class="nav-link">contact</router-link>
+          </div>
+        </nav>
         <div class="content">
           <router-view></router-view>
         </div>

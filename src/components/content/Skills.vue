@@ -1,6 +1,10 @@
 <template>
   <div id="skills">
-    Skills
+    <div class="container">
+      <div class="row">
+        do something here...
+      </div>
+    </div>
   </div>
 </template>
 

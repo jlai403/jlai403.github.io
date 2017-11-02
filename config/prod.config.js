@@ -9,5 +9,5 @@ module.exports = {
   extractSourceMap: true,
   productionGzip: true,
   productionGzipExtensions: ['js', 'css'],
-  bundleAnalyzerReport: true
+  bundleAnalyzerReport: false
 }
