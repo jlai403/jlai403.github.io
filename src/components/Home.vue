@@ -91,7 +91,7 @@ $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
         margin-top: -2.5rem;
         position: absolute;
 
-        background: url('https://source.unsplash.com/random') no-repeat center center fixed;
+        background: url('https://source.unsplash.com/featured/?zen') no-repeat center center fixed;
         background-size: cover;
         overflow: hidden;
         filter: blur(15px);
