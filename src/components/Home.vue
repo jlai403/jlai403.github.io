@@ -77,7 +77,7 @@ $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
     }
 
     &.hero-image {
-        background-image: url('https://source.unsplash.com/random');
+        background-image: url('https://source.unsplash.com/featured/?zen');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
