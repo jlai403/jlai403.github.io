@@ -16,6 +16,7 @@
             <router-link to="/projects" class="nav-link">projects</router-link>
             <router-link to="/contact" class="nav-link">contact</router-link>
           </div>
+
           <div class="social">
             <a class="facebook" href="https://facebook.com/joey.lai" target="_blank"> <i class="fa fa-facebook"></i> </a>
             <a class="linkedin" href="https://ca.linkedin.com/in/jlai403" target="_blank"> <i class="fa fa-linkedin"></i> </a>
@@ -138,6 +139,7 @@ $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
             @extend .col-xs-12;
 
             font-size: 1.75rem;
+            margin-top: 0.5rem;
 
             a {
                 text-decoration: none;
@@ -146,7 +148,14 @@ $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
                 height: 30px;
                 width: 30px;
                 border-radius: 8px;
+                line-height: 1.9;
                 margin: 0 2px;
+
+                transition: all 0.2s ease;
+                -moz-transition: all 0.2s ease;
+                -o-transform: all 0.2s ease;
+                -webkit-transition: all 0.2s ease;
+
                 &:active,
                 &:link,
                 &:visited {
@@ -155,9 +164,14 @@ $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
                     display: inline-block;
                     height: 30px;
                     width: 30px;
-                    line-height: 2;
                     border-radius: 8px;
                     margin: 0 2px;
+                }
+
+                &:hover {
+                  -webkit-transform: translate(0, -2px);
+                  -o-transform: translate(0, -2px);
+                  -moz-transform: translate(0, -2px);
                 }
             }
             .facebook:hover {

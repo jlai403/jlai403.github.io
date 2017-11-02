@@ -53,13 +53,11 @@ $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
   width: 100%;
 
   background: #43c6ac; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom, #c3cfe2, #f5f7fa);
-  background: linear-gradient(to bottom, #c3cfe2, #f5f7fa);
+  background: -webkit-linear-gradient(to bottom, rgba(162, 222, 208, 0.25), #f5f7fa);
+  background: linear-gradient(to bottom, rgba(162, 222, 208, 0.25), #f5f7fa);
 
   .navbar {
     @extend .row;
-    // background-color: rgba(255, 255, 255, 0.35);
-    // border-bottom: 1px solid #ededed;
     display: flex;
     flex-direction: row;
     height: 5rem;
