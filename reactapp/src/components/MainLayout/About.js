@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 
 import './About.scss';
 
-function MainLayout() {
+function About() {
   return (
     <div id="about">
       <div class="container">
@@ -66,4 +66,4 @@ function MainLayout() {
   );
 }
 
-export default MainLayout;
+export default About;

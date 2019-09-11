@@ -2,14 +2,14 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 import Home from './components/Home'
-import About from './components/MainLayout/About'
+import MainLayout from './components/MainLayout'
 
 function App() {
   return (
     <Router>
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route path="/about" component={About} />
+        <Route path="/about" component={MainLayout} />
       </Switch>
     </Router>
   );

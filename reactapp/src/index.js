@@ -5,6 +5,7 @@ import * as serviceWorker from './serviceWorker';
 import App from './App';
 
 import './index.scss';
+import './styles/animations.scss';
 import 'font-awesome/css/font-awesome.css'
 
 ReactDOM.render(<App />, document.getElementById('root'));
