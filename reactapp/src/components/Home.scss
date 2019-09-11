@@ -1,0 +1,175 @@
+$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+@import "../styles/variables/colors.scss";
+
+.fade-leave-active {
+  transition: opacity 1s;
+}
+
+.fade-enter-active {
+  transition: opacity 0.5s;
+  transition-delay: 0.5s;
+}
+
+.fade-enter, .fade-leave-to {
+    opacity: 0;
+}
+
+#homepage {
+  text-align: center;
+  color: #2c3e50;
+
+  &.flexbox {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
+
+  &.container-fluid {
+    padding: 0;
+  }
+
+  &.hero-image {
+    background-image: url('https://source.unsplash.com/featured/?zen');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+
+  .blur {
+    @extend .col-md-12;
+    height: 270px;
+    max-width: 650px;
+    margin-top: -2.5rem;
+    position: absolute;
+
+    background: url('https://source.unsplash.com/featured/?zen') no-repeat center center fixed;
+    background-size: cover;
+    overflow: hidden;
+    filter: blur(15px);
+  }
+
+  .content {
+    @extend .col-md-12;
+
+    border: 1px solid #aaaaaa;
+    margin-top: -5rem;
+    max-width: 650px;
+    padding: 4rem;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.5);
+
+    .main {
+      @extend .col-xs-12;
+      position: relative;
+
+      .title {
+        @extend .col-xs-12;
+        font-family: 'Roboto Condensed';
+        font-size: 4.5rem;
+        text-transform: uppercase;
+        color: #333333;
+      }
+
+      .sub-title {
+        font-family: 'Roboto Condensed';
+        font-size: 1.75rem;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+      }
+    }
+
+    .nav {
+      @extend .col-xs-12;
+
+      .nav-link {
+        @extend .col-xs-3;
+        margin: 1rem 0;
+      }
+    }
+
+    .social {
+      @extend .col-xs-12;
+
+      font-size: 1.75rem;
+      margin-top: 0.5rem;
+
+      a {
+        text-decoration: none;
+        color: #2c3e50;
+        display: inline-block;
+        height: 30px;
+        width: 30px;
+        border-radius: 8px;
+        line-height: 1.9;
+        margin: 0 2px;
+
+        transition: all 0.2s ease;
+        -moz-transition: all 0.2s ease;
+        -o-transform: all 0.2s ease;
+        -webkit-transition: all 0.2s ease;
+
+        &:active,
+        &:link,
+        &:visited {
+          text-decoration: none;
+          color: #2c3e50;
+          display: inline-block;
+          height: 30px;
+          width: 30px;
+          border-radius: 8px;
+          margin: 0 2px;
+        }
+
+        &:hover {
+          -webkit-transform: translate(0, -2px);
+          -o-transform: translate(0, -2px);
+          -moz-transform: translate(0, -2px);
+        }
+      }
+
+      .facebook:hover {
+        background: $color-facebook !important;
+        color: #ffffff;
+      }
+
+      .linkedin:hover {
+        background: $color-linkedin !important;
+        color: #ffffff;
+      }
+
+      .github:hover {
+        background: $color-github !important;
+        color: #ffffff;
+      }
+
+      .stackoverflow:hover {
+        background: $color-stackoverflow-bg !important;
+        color: $color-stackoverflow;
+      }
+
+      .instagram:hover {
+        background: $color-instagram-bg !important;
+        color: #ffffff;
+      }
+
+      .twitter:hover {
+        background: $color-twitter !important;
+        color: #ffffff;
+      }
+
+      .google:hover {
+        background: $color-google-plus !important;
+        color: #ffffff;
+      }
+
+      .pinterest:hover {
+        background: $color-pinterest !important;
+        color: #ffffff;
+      }
+    }
+  }
+}
