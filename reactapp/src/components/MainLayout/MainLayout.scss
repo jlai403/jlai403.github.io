@@ -16,11 +16,7 @@ $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
     height: 5rem;
     margin: 0;
     padding: 0 1rem;
-
-    * {
-      display: flex;
-      align-items: center;
-    }
+    border: 0;
 
     .nav-links {
       @include make-sm-column-offset(8);
@@ -28,10 +24,23 @@ $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
 
       .nav-link {
           @extend .col-xs-2;
-          margin: 1rem 0;
+          padding: 1rem 0;
           font-size: 1.25rem !important;
           display: inline;
           text-align: center;
+          border-style: solid;
+          border-width: 3px 0 0 0;
+          border-color: transparent;
+
+          &.active {
+            border-color: #00ade6;
+            border-image: -moz-linear-gradient(top,#00ade6 0,#05e3d5 100%);
+            border-image: -webkit-linear-gradient(top,#00ade6,#05e3d5);
+            border-image: -o-linear-gradient(top,#00ade6 0,#05e3d5 100%);
+            border-image: -ms-linear-gradient(top,#00ade6 0,#05e3d5 100%);
+            border-image: linear-gradient(180deg,#00ade6 0,#05e3d5);
+            border-image-slice: 2;
+          }
       }
     }
   }

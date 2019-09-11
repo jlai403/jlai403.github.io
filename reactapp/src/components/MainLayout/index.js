@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route, NavLink } from 'react-router-dom'
+import { Switch, Route, NavLink } from 'react-router-dom'
 
 import About from './About'
 import Skills from './Skills'
@@ -15,11 +15,11 @@ function MainLayout() {
         <nav className="navbar">
           <div className="nav-links">
             <div className="col-xs-2"></div>
-            <NavLink to="/" className="nav-link">home</NavLink>
-            <NavLink to="/about" className="nav-link">about</NavLink>
-            <NavLink to="/skills" className="nav-link">skills</NavLink>
-            <NavLink to="/projects" className="nav-link">projects</NavLink>
-            <NavLink to="/contact" className="nav-link">contact</NavLink>
+            <NavLink exact to="/" className="nav-link">home</NavLink>
+            <NavLink to="/about" className="nav-link" activeClassName="active">about</NavLink>
+            <NavLink to="/skills" className="nav-link" activeClassName="active">skills</NavLink>
+            <NavLink to="/projects" className="nav-link" activeClassName="active">projects</NavLink>
+            <NavLink to="/contact" className="nav-link" activeClassName="active">contact</NavLink>
           </div>
         </nav>
         <div className="content">

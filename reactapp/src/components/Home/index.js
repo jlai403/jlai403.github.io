@@ -16,16 +16,16 @@ function Home() {
 
         <div className="nav">
           <div className="nav-links">
-            <NavLink to="/about" activeClassName="active">
+            <NavLink to="/about">
               <div className="nav-link"> About </div>
             </NavLink>
-            <NavLink to="/skills" activeClassName="active">
+            <NavLink to="/skills">
               <div className="nav-link"> Skills </div>
             </NavLink>
-            <NavLink to="/projects" activeClassName="active">
+            <NavLink to="/projects">
               <div className="nav-link"> Projects </div>
             </NavLink>
-            <NavLink to="/contact" activeClassName="active">
+            <NavLink to="/contact">
               <div className="nav-link"> Contact </div>
             </NavLink>
           </div>
