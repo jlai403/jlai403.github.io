@@ -47,7 +47,7 @@
         <div class="two wide col">
           <div class="block">
             <div class="header">currently developing in</div>
-            <div class="value"> Node.js • MongoDB • SSIS • T-SQL </div>
+            <div class="value"> Node.js • MongoDB • AWS </div>
           </div>
         </div>
       </div>

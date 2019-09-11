@@ -2,7 +2,10 @@ import React from 'react';
 
 import './About.scss';
 
+
 function About() {
+  let yearsExperience = new Date().getFullYear() - 2011
+
   return (
     <div id="about">
       <div className="container">
@@ -32,7 +35,7 @@ function About() {
           <div className="col">
             <div className="block">
               <div className="header">experience</div>
-              <div className="value">6 years</div>
+              <div className="value">{yearsExperience} years</div>
             </div>
           </div>
         </div>
