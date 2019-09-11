@@ -1,64 +1,63 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom'
 
 import './About.scss';
 
 function About() {
   return (
     <div id="about">
-      <div class="container">
-        <div class="name row">
-          <div class="name">Joey Lai</div>
-          <div class="title">software developer</div>
+      <div className="container">
+        <div className="name row">
+          <div className="name">Joey Lai</div>
+          <div className="title">software developer</div>
         </div>
-        <div class="row">
-          <div class="col">
-            <div class="block">
-              <div class="header">location</div>
-              <div class="value">Calgary, AB</div>
+        <div className="row">
+          <div className="col">
+            <div className="block">
+              <div className="header">location</div>
+              <div className="value">Calgary, AB</div>
             </div>
           </div>
-          <div class="col">
-            <div class="block">
-              <div class="header">origin</div>
-              <div class="value">Hong Kong</div>
+          <div className="col">
+            <div className="block">
+              <div className="header">origin</div>
+              <div className="value">Hong Kong</div>
             </div>
           </div>
-          <div class="col">
-            <div class="block">
-              <div class="header">year</div>
-              <div class="value">1991</div>
+          <div className="col">
+            <div className="block">
+              <div className="header">year</div>
+              <div className="value">1991</div>
             </div>
           </div>
-          <div class="col">
-            <div class="block">
-              <div class="header">experience</div>
-              <div class="value">6 years</div>
+          <div className="col">
+            <div className="block">
+              <div className="header">experience</div>
+              <div className="value">6 years</div>
             </div>
           </div>
         </div>
-        <div class="no margin row">
-          <div class="col">
-            <div class="block">
-              <div class="header">favorite team</div>
-              <div class="value">Tampa Bay Lightning</div>
+        <div className="no margin row">
+          <div className="col">
+            <div className="block">
+              <div className="header">favorite team</div>
+              <div className="value">Tampa Bay Lightning</div>
             </div>
           </div>
-          <div class="col">
-            <div class="block">
-              <div class="header">interests</div>
-              <div class="value">Startups • Sports • Cars</div>
+          <div className="col">
+            <div className="block">
+              <div className="header">interests</div>
+              <div className="value">Startups • Sports • Cars</div>
             </div>
           </div>
-          <div class="two wide col">
-            <div class="block">
-              <div class="header">currently developing in</div>
-              <div class="value"> Node.js • MongoDB • SSIS • T-SQL </div>
+          <div className="two wide col">
+            <div className="block">
+              <div className="header">currently developing in</div>
+              <div className="value"> Node.js • MongoDB • SSIS • T-SQL </div>
             </div>
           </div>
         </div>
 
-        <div class="row">
+        <div className="row">
           do something here...
         </div>
       </div>

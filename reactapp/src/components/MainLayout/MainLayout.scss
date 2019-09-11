@@ -1,19 +1,6 @@
 $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
 
-.fade-leave-active {
-    transition: opacity 1s;
-}
-
-.fade-enter-active {
-    transition: opacity 0.5s;
-    transition-delay: 0.5s;
-}
-
-.fade-enter, .fade-leave-to {
-    opacity: 0;
-}
-
 #layout {
   height: 100%;
   width: 100%;
