@@ -1,6 +1,6 @@
 import React from 'react';
-import { Switch, Route, NavLink } from 'react-router-dom'
-import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import { NavLink } from 'react-router-dom'
+import { Link, Element } from 'react-scroll'
 
 import About from './About'
 import Skills from './Skills'
@@ -36,13 +36,6 @@ function MainLayout() {
           <Element name="contact" className="element">
             <Contact/>
           </Element>
-
-          {/*<Switch>
-            <Route path="/about" component={About} />
-            <Route path="/skills" component={Skills} />
-            <Route path="/projects" component={Projects} />
-            <Route path="/contact" component={Contact} />
-          </Switch>*/}
         </div>
       </div>
       <footer className="footer">
