@@ -1,5 +1,6 @@
 import React from 'react';
 import { Switch, Route, NavLink } from 'react-router-dom'
+import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 import About from './About'
 import Skills from './Skills'
@@ -16,22 +17,34 @@ function MainLayout() {
           <div className="nav-links">
             <div className="col-xs-2"></div>
             <NavLink exact to="/" className="nav-link">home</NavLink>
-            <NavLink to="/about" className="nav-link" activeClassName="active">about</NavLink>
-            <NavLink to="/skills" className="nav-link" activeClassName="active">skills</NavLink>
-            <NavLink to="/projects" className="nav-link" activeClassName="active">projects</NavLink>
-            <NavLink to="/contact" className="nav-link" activeClassName="active">contact</NavLink>
+            <Link href="" to="about" className="nav-link" activeClass="active" spy={true} smooth={true} offset={-65}>about</Link>
+            <Link href="" to="skills" className="nav-link" activeClass="active" spy={true} smooth={true} offset={-65}>skills</Link>
+            <Link href="" to="projects" className="nav-link" activeClass="active" spy={true} smooth={true} offset={-65}>projects</Link>
+            <Link href="" to="contact" className="nav-link" activeClass="active" spy={true} smooth={true} offset={-65}>contact</Link>
           </div>
         </nav>
         <div className="content">
-          <Switch>
+          <Element name="about" className="element">
+            <About/>
+          </Element>
+          <Element name="skills" className="element">
+            <Skills/>
+          </Element>
+          <Element name="projects" className="element">
+            <Projects/>
+          </Element>
+          <Element name="contact" className="element">
+            <Contact/>
+          </Element>
+
+          {/*<Switch>
             <Route path="/about" component={About} />
             <Route path="/skills" component={Skills} />
             <Route path="/projects" component={Projects} />
             <Route path="/contact" component={Contact} />
-          </Switch>
+          </Switch>*/}
         </div>
       </div>
-
       <footer className="footer">
 
       </footer>

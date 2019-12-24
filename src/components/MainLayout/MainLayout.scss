@@ -13,6 +13,8 @@ $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
     @extend .row;
     display: flex;
     flex-direction: row;
+    position: fixed;
+    width: 100%;
     height: 5rem;
     margin: 0;
     padding: 0 1rem;

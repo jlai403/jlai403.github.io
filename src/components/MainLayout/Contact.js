@@ -3,9 +3,9 @@ import React from 'react';
 function Contact() {
   return (
     <div id="contact">
-      <div className="container">
+      <div className="container" style={{minHeight: '100vh'}}>
         <div className="row">
-          do something here...
+          contact – do something here...
         </div>
       </div>
     </div>

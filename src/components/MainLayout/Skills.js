@@ -3,9 +3,9 @@ import React from 'react';
 function Skills() {
   return (
     <div id="skills">
-      <div className="container">
+      <div className="container" style={{minHeight: '100vh'}}>
         <div className="row">
-          do something here...
+          skills – do something here...
         </div>
       </div>
     </div>

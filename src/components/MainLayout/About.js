@@ -7,7 +7,7 @@ function About() {
   let yearsExperience = new Date().getFullYear() - 2011
 
   return (
-    <div id="about">
+    <div id="about" style={{minHeight: '100vh'}}>
       <div className="container">
         <div className="name row">
           <div className="name">Joey Lai</div>
@@ -61,7 +61,6 @@ function About() {
         </div>
 
         <div className="row">
-          do something here...
         </div>
       </div>
     </div>
