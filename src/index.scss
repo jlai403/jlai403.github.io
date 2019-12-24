@@ -9,7 +9,7 @@ html,
     height: 100%;
     width: 100%;
 
-    font-family: 'Roboto Condesed', 'Avenir', 'Open Sans', Helvetica, Arial, sans-serif;
+    font-family: 'Roboto Condensed', 'Avenir', 'Open Sans', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -33,7 +33,7 @@ a {
     font-weight: normal !important;
   }
 
-  &.nav-link {
+  .nav-link {
     text-decoration: none;
     font-family: 'Roboto Condensed';
     font-size: 1.5rem;
@@ -42,8 +42,13 @@ a {
     text-transform: uppercase;
     background-color: transparent !important;
 
+    &:hover {
+      text-decoration: none;
+      transition: color 1s ease;
+      color: #e74c3c !important;
+    }
+
     &:active,
-    &:hover,
     &:link,
     &:visited {
       text-decoration: none;
@@ -59,21 +64,4 @@ a {
 
 .center.text {
   text-align: center;
-}
-
-.skills a.nav-link {
-  color: #ffffff;
-
-  &:active,
-  &:hover,
-  &:link,
-  &:visited {
-    color: #ffffff;
-  }
-}
-
-a.nav-link:hover {
-  text-decoration: none;
-  transition: color 1s ease;
-  color: #e74c3c !important;
 }
