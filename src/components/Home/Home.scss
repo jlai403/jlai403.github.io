@@ -125,6 +125,7 @@ $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
         }
 
         &:hover {
+          transition: color 0.5s ease, transform 2s ease;
           -webkit-transform: translate(0, -2px);
           -o-transform: translate(0, -2px);
           -moz-transform: translate(0, -2px);
