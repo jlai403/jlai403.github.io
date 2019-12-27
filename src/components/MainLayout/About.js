@@ -16,6 +16,13 @@ function About() {
           <div className="name">Joey Lai</div>
           <div className="title">and I build products</div>
         </div>
+
+        <div className="bio row">
+          <p>
+            Some paragraph here
+          </p>
+        </div>
+
         <div className="row">
           <Link href="" to="skills" spy={true} smooth={true} offset={-65}>
             <div className="bouncing learn-more">
