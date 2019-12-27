@@ -19,13 +19,13 @@ function Home() {
             <NavLink to="/about">
               <div className="nav-link"> About </div>
             </NavLink>
-            <NavLink to="/skills">
+            <NavLink to="/about#skills">
               <div className="nav-link"> Skills </div>
             </NavLink>
-            <NavLink to="/projects">
+            <NavLink to="/about#projects">
               <div className="nav-link"> Projects </div>
             </NavLink>
-            <NavLink to="/contact">
+            <NavLink to="/about#contact">
               <div className="nav-link"> Contact </div>
             </NavLink>
           </div>

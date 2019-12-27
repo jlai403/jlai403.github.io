@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { NavLink } from 'react-router-dom'
-import { Link, Element } from 'react-scroll'
+import { Link, Element, scroller } from 'react-scroll'
 
 import About from './About'
 import Skills from './Skills'
@@ -10,6 +10,18 @@ import Contact from './Contact'
 import './MainLayout.scss';
 
 function MainLayout() {
+
+  useEffect(() => {
+    let href = window.location.href
+    if (!href.includes('#')) return
+    let anchor = href.split('#').pop()
+    scroller.scrollTo(anchor, {
+      duration: 1500,
+      delay: 100,
+      smooth: true
+    })
+  })
+
   return (
     <div id="layout" className="fadeIn one">
       <div className="container wrapper">
