@@ -3,9 +3,9 @@
 }
 
 .bouncing {
-  animation: bouncing 1.5s infinite;
-  -moz-animation: bouncing 1.5s infinite;
-  -webkit-animation: bouncing 1.5s infinite;
+  animation: bouncing 2s infinite;
+  -moz-animation: bouncing 2s infinite;
+  -webkit-animation: bouncing 2s infinite;
 }
 
 .fadeInFast {
@@ -20,7 +20,7 @@
   }
 
   50% {
-    transform: translateY(65%);
+    transform: translateY(30%);
   }
 
   100% {
@@ -35,7 +35,7 @@
   }
 
   50% {
-    -webkit-transform: translateY(65%);
+    -webkit-transform: translateY(30%);
   }
 
   100% {
@@ -50,7 +50,7 @@
   }
 
   50% {
-    -moz-transform: translateY(65%);
+    -moz-transform: translateY(30%);
   }
 
   100% {

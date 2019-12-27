@@ -8,58 +8,39 @@ $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
   .container {
     max-width: 100%;
     padding: 0 7.5rem;
-    text-align: center;
 
-    .name.row {
+    .intro.row {
       background: linear-gradient(to right, #00b96a, #c3eac7);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
 
+      .hello {
+        font-size: 3rem;
+        font-family: 'Alex Brush';
+      }
+
       .name {
-        font-size: 5rem;
+        margin-top: -1rem;
+        font-size: 7rem;
         font-weight: 700;
         font-family: 'Raleway', sans-serif;
       }
 
       .title {
-        font-size: 2rem;
+        font-size: 5rem;
         margin-top: -0.5rem;
       }
     }
 
-    .row {
-      margin-top: 2rem;
-      padding-top: 1rem;
-
-      &.no.margin {
-        margin-top: 0;
-      }
-
-      .col {
-        @extend .col-sm-3;
-        padding: 0 5px;
-
-        &.two.wide {
-          @extend .col-sm-6;
-          padding: 0 5px;
-        }
-
-        .block {
-          padding: 10px;
-          background-color: rgba(232, 232, 232, 0.3);
-        }
-
-        .header {
-          font-size: 1.35rem;
-          text-transform: lowercase;
-        }
-
-        .value {
-          font-size: 1.25rem;
-          font-weight: 700;
-          color: #00b96a;
-        }
-      }
+    .learn-more {
+      margin-top: 200px;
+      width: -webkit-max-content;
+      width: -moz-max-content;
+      width: max-content;
+      text-weight: bold;
+      text-transform: uppercase;
+      text-align: center;
+      color: #00b96a !important;
     }
   }
 }

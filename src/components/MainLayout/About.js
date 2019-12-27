@@ -1,6 +1,8 @@
 import React from 'react';
+import { Link } from 'react-scroll'
 
 import './About.scss';
+import 'font-awesome/css/font-awesome.css'
 
 
 function About() {
@@ -9,58 +11,18 @@ function About() {
   return (
     <div id="about" style={{minHeight: '100vh'}}>
       <div className="container">
-        <div className="name row">
+        <div className="intro row">
+          <div className="hello">Hello, my name is</div>
           <div className="name">Joey Lai</div>
-          <div className="title">software developer</div>
+          <div className="title">and I build products</div>
         </div>
         <div className="row">
-          <div className="col">
-            <div className="block">
-              <div className="header">location</div>
-              <div className="value">Calgary, AB</div>
+          <Link href="" to="skills" spy={true} smooth={true} offset={-65}>
+            <div className="bouncing learn-more">
+              Learn More <br/>
+              <i className="fa fa-chevron-down"></i>
             </div>
-          </div>
-          <div className="col">
-            <div className="block">
-              <div className="header">origin</div>
-              <div className="value">Hong Kong</div>
-            </div>
-          </div>
-          <div className="col">
-            <div className="block">
-              <div className="header">year</div>
-              <div className="value">1991</div>
-            </div>
-          </div>
-          <div className="col">
-            <div className="block">
-              <div className="header">experience</div>
-              <div className="value">{yearsExperience} years</div>
-            </div>
-          </div>
-        </div>
-        <div className="no margin row">
-          <div className="col">
-            <div className="block">
-              <div className="header">favorite team</div>
-              <div className="value">Tampa Bay Lightning</div>
-            </div>
-          </div>
-          <div className="col">
-            <div className="block">
-              <div className="header">interests</div>
-              <div className="value">Startups • Sports • Cars</div>
-            </div>
-          </div>
-          <div className="two wide col">
-            <div className="block">
-              <div className="header">currently developing in</div>
-              <div className="value"> Node.js • MongoDB • SSIS • T-SQL </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="row">
+          </Link>
         </div>
       </div>
     </div>
