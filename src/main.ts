@@ -23,5 +23,24 @@ router.afterEach((to) => {
 })
 
 const app = createApp(App)
+
+// Theme Management Logic
+const initTheme = () => {
+  const savedTheme = localStorage.getItem('theme')
+  const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+  const initialTheme = savedTheme || (systemDark ? 'dark' : 'light')
+  
+  document.documentElement.setAttribute('data-theme', initialTheme)
+  
+  // Update system preference listener
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+    if (!localStorage.getItem('theme')) {
+      document.documentElement.setAttribute('data-theme', e.matches ? 'dark' : 'light')
+    }
+  })
+}
+
+initTheme()
+
 app.use(router)
 app.mount('#root')

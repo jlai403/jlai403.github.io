@@ -4,17 +4,99 @@
 @theme {
   --font-mono: "JetBrains Mono", "Cascadia Code", "SF Mono", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", monospace;
   
-  --color-bg-primary: #ffffff;
-  --color-text-primary: #111111;
-  --color-text-secondary: #666666;
-  --color-link: #3b82f6; /* Modern Blue, more pleasing than default blue */
-  --color-link-hover: #2563eb;
+  /* Catppuccin Latte Palette */
+  --color-latte-rosewater: #dc8a78;
+  --color-latte-flamingo: #dd7878;
+  --color-latte-pink: #ea76cb;
+  --color-latte-mauve: #8839ef;
+  --color-latte-red: #d20f39;
+  --color-latte-maroon: #e64553;
+  --color-latte-peach: #fe640b;
+  --color-latte-yellow: #df8e1d;
+  --color-latte-green: #40a02b;
+  --color-latte-teal: #179287;
+  --color-latte-sky: #04a5e5;
+  --color-latte-sapphire: #209fb5;
+  --color-latte-blue: #1e66f5;
+  --color-latte-lavender: #7287fd;
+  --color-latte-text: #4c4f69;
+  --color-latte-subtext1: #5c5f77;
+  --color-latte-subtext0: #6c6f85;
+  --color-latte-overlay2: #7c7f93;
+  --color-latte-overlay1: #8c8fa1;
+  --color-latte-overlay0: #9ca0b0;
+  --color-latte-surface2: #acb0be;
+  --color-latte-surface1: #bcc0cc;
+  --color-latte-surface0: #ccd0da;
+  --color-latte-base: #eff1f5;
+  --color-latte-mantle: #e6e9ef;
+  --color-latte-crust: #dce0e8;
+
+  /* Catppuccin Frappé Palette */
+  --color-frappe-rosewater: #f2d5cf;
+  --color-frappe-flamingo: #eebebe;
+  --color-frappe-pink: #f4b8e4;
+  --color-frappe-mauve: #ca9ee6;
+  --color-frappe-red: #e78284;
+  --color-frappe-maroon: #ea999c;
+  --color-frappe-peach: #ef9f76;
+  --color-frappe-yellow: #e5c890;
+  --color-frappe-green: #a6d189;
+  --color-frappe-teal: #81c8be;
+  --color-frappe-sky: #99d1db;
+  --color-frappe-sapphire: #85c1dc;
+  --color-frappe-blue: #8caaee;
+  --color-frappe-lavender: #babbf1;
+  --color-frappe-text: #c6d0f5;
+  --color-frappe-subtext1: #b5bfe2;
+  --color-frappe-subtext0: #a5adce;
+  --color-frappe-overlay2: #949cbb;
+  --color-frappe-overlay1: #838ba7;
+  --color-frappe-overlay0: #737994;
+  --color-frappe-surface2: #626880;
+  --color-frappe-surface1: #51576d;
+  --color-frappe-surface0: #414559;
+  --color-frappe-base: #303446;
+  --color-frappe-mantle: #292c3c;
+  --color-frappe-crust: #232634;
+
+  /* Default Theme Variables (Dark/Frappé) */
+  --color-bg-primary: var(--color-frappe-base);
+  --color-text-primary: var(--color-frappe-text);
+  --color-text-secondary: var(--color-frappe-subtext0);
+  --color-link: var(--color-frappe-blue);
+  --color-link-hover: var(--color-frappe-lavender);
+  --color-border: var(--color-frappe-surface0);
+  --color-selection-bg: var(--color-frappe-surface2);
+  --color-selection-text: var(--color-frappe-rosewater);
+}
+
+:root[data-theme='light'] {
+  --color-bg-primary: var(--color-latte-base);
+  --color-text-primary: var(--color-latte-text);
+  --color-text-secondary: var(--color-latte-subtext0);
+  --color-link: var(--color-latte-blue);
+  --color-link-hover: var(--color-latte-lavender);
+  --color-border: var(--color-latte-surface0);
+  --color-selection-bg: var(--color-latte-surface2);
+  --color-selection-text: var(--color-latte-rosewater);
+}
+
+:root[data-theme='dark'] {
+  --color-bg-primary: var(--color-frappe-base);
+  --color-text-primary: var(--color-frappe-text);
+  --color-text-secondary: var(--color-frappe-subtext0);
+  --color-link: var(--color-frappe-blue);
+  --color-link-hover: var(--color-frappe-lavender);
+  --color-border: var(--color-frappe-surface0);
+  --color-selection-bg: var(--color-frappe-surface2);
+  --color-selection-text: var(--color-frappe-rosewater);
 }
 
 body,
 html,
 #root {
-  @apply h-full w-full font-mono bg-bg-primary text-text-primary antialiased text-[14px] leading-[22px] font-[400] tracking-[-0.1px] selection:bg-[#eeeeee];
+  @apply h-full w-full font-mono bg-bg-primary text-text-primary antialiased text-[14px] leading-[22px] font-[400] tracking-[-0.1px] selection:bg-selection-bg selection:text-selection-text;
 }
 
 a {

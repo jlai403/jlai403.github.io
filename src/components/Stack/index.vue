@@ -11,14 +11,14 @@
 
       <div class="w-full">
         <div v-for="(group, groupName) in groupedStack" :key="groupName" class="mb-10 last:mb-0">
-          <div class="grid grid-cols-2 pb-2 mb-2 border-b border-gray-100 opacity-40 text-[10px] uppercase tracking-wider font-bold">
+          <div class="grid grid-cols-2 pb-2 mb-2 border-b border-ctp-surface0 opacity-40 text-[10px] uppercase tracking-wider font-bold">
             <div>{{ groupName }}</div>
             <div>description</div>
           </div>
 
           <div class="space-y-0 text-[13px] group/stack">
             <div v-for="item in group" :key="item.name" 
-                class="grid grid-cols-2 py-3 border-b border-gray-50 items-center group transition-all duration-300 group-hover/stack:opacity-30 hover:!opacity-100">
+                class="grid grid-cols-2 py-3 border-b border-ctp-surface0 items-center group transition-all duration-300 group-hover/stack:opacity-30 hover:!opacity-100">
               <div class="flex items-center gap-3">
                 <img :src="item.icon" class="w-4 h-4 transition-all duration-300" 
                     v-if="item.icon" :alt="item.name" />
