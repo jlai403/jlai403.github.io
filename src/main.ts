@@ -23,5 +23,16 @@ router.afterEach((to) => {
 })
 
 const app = createApp(App)
+
+// Theme Management Logic
+const initTheme = () => {
+  const savedTheme = localStorage.getItem('theme')
+  if (savedTheme) {
+    document.documentElement.setAttribute('data-theme', savedTheme)
+  }
+}
+
+initTheme()
+
 app.use(router)
 app.mount('#root')

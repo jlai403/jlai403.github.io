@@ -54,9 +54,9 @@
   @apply opacity-100;
   transform: translateY(-2px);
 }
-.social-icon.linkedin:hover { color: #0077b5 !important; }
-.social-icon.github:hover { color: #333333 !important; }
-.social-icon.instagram:hover { color: #e4405f !important; }
+.social-icon.linkedin:hover { color: var(--color-ctp-blue) !important; }
+.social-icon.github:hover { color: var(--color-ctp-mauve) !important; }
+.social-icon.instagram:hover { color: var(--color-ctp-pink) !important; }
 
 .blinking-cursor {
   @apply inline-block w-[1ch] h-[1.2em];
