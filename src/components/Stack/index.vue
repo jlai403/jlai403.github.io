@@ -39,8 +39,8 @@ import { computed } from 'vue'
 const stackItems = [
   // Languages & Frameworks
   { name: 'typescript', category: 'languages', description: 'main language', icon: 'https://www.google.com/s2/favicons?domain=typescriptlang.org&sz=32' },
-  { name: 'python', category: 'languages', description: 'scripting & backend', icon: 'https://www.google.com/s2/favicons?domain=python.org&sz=32' },
   { name: 'deno', category: 'languages', description: 'modern runtime', icon: 'https://www.google.com/s2/favicons?domain=deno.com&sz=32' },
+  { name: 'python', category: 'languages', description: 'scripting & backend', icon: 'https://www.google.com/s2/favicons?domain=python.org&sz=32' },
   { name: 'vuejs', category: 'languages', description: 'frontend choices', icon: 'https://www.google.com/s2/favicons?domain=vuejs.org&sz=32' },
   { name: 'tailwindcss', category: 'languages', description: 'styling', icon: 'https://www.google.com/s2/favicons?domain=tailwindcss.com&sz=32' },
   
@@ -50,9 +50,9 @@ const stackItems = [
   { name: 'docker', category: 'infrastructure', description: 'containerization', icon: 'https://www.google.com/s2/favicons?domain=docker.com&sz=32' },
   
   // Databases
-  { name: 'duckdb', category: 'databases', description: 'analytical database', icon: 'https://www.google.com/s2/favicons?domain=duckdb.org&sz=32' },
-  { name: 'sqlite', category: 'databases', description: 'embedded database', icon: 'https://www.google.com/s2/favicons?domain=sqlite.org&sz=32' },
   { name: 'mongodb', category: 'databases', description: 'nosql store', icon: 'https://www.google.com/s2/favicons?domain=mongodb.com&sz=32' },
+  { name: 'sqlite', category: 'databases', description: 'embedded database', icon: 'https://www.google.com/s2/favicons?domain=sqlite.org&sz=32' },
+  { name: 'duckdb', category: 'databases', description: 'analytical database', icon: 'https://www.google.com/s2/favicons?domain=duckdb.org&sz=32' },
   
   // Software
   { name: 'vs code', category: 'apps', description: 'primary editor', icon: 'https://www.google.com/s2/favicons?domain=code.visualstudio.com&sz=32' },
@@ -60,8 +60,9 @@ const stackItems = [
   { name: 'zen browser', category: 'apps', description: 'primary browser', icon: 'https://www.google.com/s2/favicons?domain=zen-browser.app&sz=32' },
   { name: 'raycast', category: 'apps', description: 'productivity', icon: 'https://www.google.com/s2/favicons?domain=raycast.com&sz=32' },
   { name: 'aerospace', category: 'apps', description: 'tiling window manager', icon: 'https://www.google.com/s2/favicons?domain=nikitabobko.github.io/AeroSpace/guide&sz=32' },
-  { name: '1password', category: 'apps', description: 'security', icon: 'https://www.google.com/s2/favicons?domain=1password.com&sz=32' },
   { name: 'stats menu', category: 'apps', description: 'system monitor', icon: 'https://raw.githubusercontent.com/exelban/stats/master/Stats/Supporting%20Files/Assets.xcassets/AppIcon.appiconset/icon_256x256.png' },
+  { name: 'doll', category: 'apps', description: 'menu bar vibes', icon: 'https://raw.githubusercontent.com/xiaogdgenuine/Doll/refs/heads/main/Doll/Assets.xcassets/AppIcon.appiconset/32.png' },
+  { name: '1password', category: 'apps', description: 'security', icon: 'https://www.google.com/s2/favicons?domain=1password.com&sz=32' },
   { name: 'obsidian', category: 'apps', description: 'knowledge base', icon: 'https://www.google.com/s2/favicons?domain=obsidian.md&sz=32' },
   { name: 'notion', category: 'apps', description: 'documentation', icon: 'https://www.google.com/s2/favicons?domain=notion.so&sz=32' },
   
@@ -70,7 +71,6 @@ const stackItems = [
   { name: 'tmux', category: 'terminal', description: 'terminal multiplexer', icon: 'https://raw.githubusercontent.com/tmux/tmux/refs/heads/master/logo/favicon.ico' },
   { name: 'starship', category: 'terminal', description: 'cross-shell prompt', icon: 'https://www.google.com/s2/favicons?domain=starship.rs&sz=32' },
   { name: 'opencode', category: 'terminal', description: 'open source tools', icon: 'https://www.google.com/s2/favicons?domain=opencode.ai&sz=32' },
-  { name: 'doll', category: 'terminal', description: 'menu bar vibes', icon: 'https://raw.githubusercontent.com/xiaogdgenuine/Doll/refs/heads/main/Doll/Assets.xcassets/AppIcon.appiconset/32.png' }
 ]
 
 const groupedStack = computed(() => {

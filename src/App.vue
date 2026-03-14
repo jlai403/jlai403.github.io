@@ -17,10 +17,11 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 
-const isDark = ref(true)
+const isDark = ref(window.matchMedia('(prefers-color-scheme: dark)').matches)
 
 const toggleTheme = () => {
-  const currentTheme = document.documentElement.getAttribute('data-theme')
+  const currentTheme = document.documentElement.getAttribute('data-theme') || 
+                       (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
   const newTheme = currentTheme === 'dark' ? 'light' : 'dark'
   
   document.documentElement.setAttribute('data-theme', newTheme)
@@ -30,7 +31,16 @@ const toggleTheme = () => {
 
 onMounted(() => {
   const currentTheme = document.documentElement.getAttribute('data-theme')
-  isDark.value = currentTheme === 'dark'
+  if (currentTheme) {
+    isDark.value = currentTheme === 'dark'
+  }
+
+  // Sync with system theme changes if no manual preference
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+    if (!localStorage.getItem('theme')) {
+      isDark.value = e.matches
+    }
+  })
 })
 </script>
 

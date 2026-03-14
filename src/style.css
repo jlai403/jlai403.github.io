@@ -60,15 +60,28 @@
   --color-frappe-mantle: #292c3c;
   --color-frappe-crust: #232634;
 
-  /* Default Theme Variables (Dark/Frappé) */
-  --color-bg-primary: var(--color-frappe-base);
-  --color-text-primary: var(--color-frappe-text);
-  --color-text-secondary: var(--color-frappe-subtext0);
-  --color-link: var(--color-frappe-blue);
-  --color-link-hover: var(--color-frappe-lavender);
-  --color-border: var(--color-frappe-surface0);
-  --color-selection-bg: var(--color-frappe-surface2);
-  --color-selection-text: var(--color-frappe-rosewater);
+  /* Default Theme Variables (System Default - Latte for light, Frappé for dark) */
+  --color-bg-primary: var(--color-latte-base);
+  --color-text-primary: var(--color-latte-text);
+  --color-text-secondary: var(--color-latte-subtext0);
+  --color-link: var(--color-latte-blue);
+  --color-link-hover: var(--color-latte-lavender);
+  --color-border: var(--color-latte-surface0);
+  --color-selection-bg: var(--color-latte-surface2);
+  --color-selection-text: var(--color-latte-rosewater);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg-primary: var(--color-frappe-base);
+    --color-text-primary: var(--color-frappe-text);
+    --color-text-secondary: var(--color-frappe-subtext0);
+    --color-link: var(--color-frappe-blue);
+    --color-link-hover: var(--color-frappe-lavender);
+    --color-border: var(--color-frappe-surface0);
+    --color-selection-bg: var(--color-frappe-surface2);
+    --color-selection-text: var(--color-frappe-rosewater);
+  }
 }
 
 :root[data-theme='light'] {
