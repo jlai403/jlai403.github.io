@@ -18,7 +18,7 @@
 
           <div class="space-y-0 text-[13px] group/stack">
             <div v-for="item in group" :key="item.name" 
-                class="grid grid-cols-2 py-3 border-b border-ctp-surface0 items-center group transition-all duration-300 group-hover/stack:opacity-30 hover:!opacity-100">
+                class="grid grid-cols-2 py-3 border-b border-ctp-surface0 items-center group transition-all duration-300 group-hover/stack:opacity-30 hover:opacity-100!">
               <div class="flex items-center gap-3">
                 <img :src="item.icon" class="w-4 h-4 transition-all duration-300" 
                     v-if="item.icon" :alt="item.name" />
