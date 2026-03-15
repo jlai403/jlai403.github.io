@@ -113,7 +113,7 @@ html,
 }
 
 a {
-  @apply no-underline text-link italic underline decoration-1 underline-offset-4 transition-all duration-200 ease-[cubic-bezier(0.19,1,0.22,1)];
+  @apply no-underline text-link italic decoration-1 underline-offset-4 transition-all duration-200 ease-[cubic-bezier(0.19,1,0.22,1)];
 }
 
 a:hover {

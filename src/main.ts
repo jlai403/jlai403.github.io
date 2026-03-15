@@ -9,6 +9,7 @@ import 'font-awesome/css/font-awesome.css'
 const routes = [
   { path: '/', component: Home },
   { path: '/stack', component: () => import('./components/Stack/index.vue') },
+  { path: '/experience', component: () => import('./components/Experience/index.vue') },
 ]
 
 const router = createRouter({
@@ -18,7 +19,9 @@ const router = createRouter({
 
 router.afterEach((to) => {
   const baseTitle = 'joey lai'
-  const pageTitle = to.path === '/stack' ? 'stack' : 'software developer'
+  let pageTitle = 'software developer'
+  if (to.path === '/stack') pageTitle = 'stack'
+  if (to.path === '/experience') pageTitle = 'experience'
   document.title = `${baseTitle} • ${pageTitle}`
 })
 
