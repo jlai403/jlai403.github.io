@@ -1,6 +1,9 @@
 <template>
-  <div id="homepage" class="flex justify-center w-full min-h-full py-12 md:py-[100px] px-6" :class="{ 'is-typing': isTyping }">
-    <div class="max-w-[500px] w-full text-left">
+  <div id="homepage" class="flex justify-center w-full min-h-full py-8 md:py-12 px-6" :class="{ 'is-typing': isTyping }">
+    <div class="max-w-[500px] w-full text-left relative">
+      <div class="absolute -top-2 right-0">
+        <ThemeToggle />
+      </div>
       <div class="flex flex-row gap-6 md:gap-8 items-start mb-12">
         <img src="/img/self.png" alt="Joey Lai" class="w-20 h-20 rounded-full border border-gray-100 flex-shrink-0" />
         <div class="flex-1 mt-1">
@@ -48,6 +51,7 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
 import type { Ref } from 'vue';
+import ThemeToggle from '../ThemeToggle.vue';
 
 // Dennis Jin Style Home Refined + Font-Width Cursor
 

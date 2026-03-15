@@ -4,7 +4,7 @@
     class="flex justify-center w-full min-h-full py-8 md:py-12 px-6"
   >
     <div class="max-w-[500px] w-full text-left">
-      <div class="flex justify-between items-baseline mb-8 pr-10 md:pr-0">
+      <div class="flex justify-between items-baseline mb-8">
         <div class="flex items-baseline gap-4">
           <h1 class="font-bold mb-0">stack</h1>
           <a
@@ -15,7 +15,10 @@
             >.dotfiles</a
           >
         </div>
-        <router-link to="/" class="text-[12px] !no-underline">index</router-link>
+        <div class="flex items-center gap-2">
+          <router-link to="/" class="text-[12px] !no-underline">index</router-link>
+          <ThemeToggle />
+        </div>
       </div>
 
       <div class="w-full">
@@ -45,6 +48,7 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
+import ThemeToggle from '../ThemeToggle.vue'
 
 const stackItems = [
   // Languages & Frameworks

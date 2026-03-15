@@ -1,14 +1,17 @@
 <template>
-  <div id="experience-page" class="flex justify-center w-full min-h-full py-12 md:py-[100px] px-6">
+  <div id="experience-page" class="flex justify-center w-full min-h-full py-8 md:py-12 px-6">
     <div class="max-w-[500px] w-full text-left">
-      <div class="flex justify-between items-baseline mb-12 pr-10 md:pr-0">
+      <div class="flex justify-between items-baseline mb-8">
         <h1 class="font-bold mb-0">experience</h1>
-        <router-link to="/" class="text-[12px] !no-underline">index</router-link>
+        <div class="flex items-center gap-2">
+          <router-link to="/" class="text-[12px] !no-underline">index</router-link>
+          <ThemeToggle />
+        </div>
       </div>
 
       <div class="w-full">
         <!-- Current Roles -->
-        <div class="mb-12">
+        <div class="mb-8">
           <div class="grid grid-cols-2 pb-2 mb-4 opacity-40 text-[10px] uppercase tracking-wider font-bold">
             <div>current roles</div>
             <div class="text-right">period</div>
@@ -27,7 +30,7 @@
         </div>
 
         <!-- Past Roles -->
-        <div class="mb-10 last:mb-0">
+        <div class="mb-8 last:mb-0">
           <div class="grid grid-cols-2 pb-2 mb-4 opacity-40 text-[10px] uppercase tracking-wider font-bold">
             <div>past roles</div>
             <div class="text-right">period</div>
@@ -51,6 +54,7 @@
 
 <script setup lang="ts">
 import { computed } from 'vue';
+import ThemeToggle from '../ThemeToggle.vue';
 
 const jobs = [
   { company: 'stellaralgo', role: 'svp engineering', duration: '2017 - current' },
