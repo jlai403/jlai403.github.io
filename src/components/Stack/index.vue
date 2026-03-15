@@ -4,7 +4,7 @@
     class="flex justify-center w-full min-h-full py-8 md:py-12 px-6"
   >
     <div class="max-w-[500px] w-full text-left">
-      <div class="flex justify-between items-baseline mb-8">
+      <div class="flex justify-between items-baseline mb-8 pr-10 md:pr-0">
         <div class="flex items-baseline gap-4">
           <h1 class="font-bold mb-0">stack</h1>
           <a

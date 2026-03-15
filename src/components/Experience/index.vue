@@ -1,7 +1,7 @@
 <template>
   <div id="experience-page" class="flex justify-center w-full min-h-full py-12 md:py-[100px] px-6">
     <div class="max-w-[500px] w-full text-left">
-      <div class="flex justify-between items-baseline mb-12">
+      <div class="flex justify-between items-baseline mb-12 pr-10 md:pr-0">
         <h1 class="font-bold mb-0">experience</h1>
         <router-link to="/" class="text-[12px] !no-underline">index</router-link>
       </div>
