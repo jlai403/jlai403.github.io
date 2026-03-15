@@ -1,24 +1,34 @@
 <template>
-  <div id="stack-page" class="flex justify-center w-full min-h-full py-12 md:py-[100px] px-6">
+  <div
+    id="stack-page"
+    class="flex justify-center w-full min-h-full py-8 md:py-12 px-6"
+  >
     <div class="max-w-[500px] w-full text-left">
-      <div class="flex justify-between items-baseline mb-12">
+      <div class="flex justify-between items-baseline mb-8">
         <div class="flex items-baseline gap-4">
           <h1 class="font-bold mb-0">stack</h1>
-          <a href="https://github.com/jlai403/.dotfiles" target="_blank" rel="noopener noreferrer" class="text-[12px] opacity-40 hover:opacity-100 !no-underline hover:underline">.dotfiles</a>
+          <a
+            href="https://github.com/jlai403/.dotfiles"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-[12px] !no-underline"
+            >.dotfiles</a
+          >
         </div>
-        <router-link to="/" class="text-[12px] opacity-40 hover:opacity-100 !no-underline !italic hover:underline">index</router-link>
+        <router-link to="/" class="text-[12px] !no-underline">index</router-link>
       </div>
 
       <div class="w-full">
-        <div v-for="(group, groupName) in groupedStack" :key="groupName" class="mb-10 last:mb-0">
-          <div class="grid grid-cols-2 pb-2 mb-2 border-b border-ctp-surface0 opacity-40 text-[10px] uppercase tracking-wider font-bold">
+        <div v-for="(group, groupName) in groupedStack" :key="groupName" class="mb-8 last:mb-0">
+          <div
+            class="grid grid-cols-2 pb-2 mb-2 opacity-40 text-[10px] uppercase tracking-wider font-bold"
+          >
             <div>{{ groupName }}</div>
             <div>description</div>
           </div>
 
           <div class="space-y-0 text-[13px] group/stack">
-            <div v-for="item in group" :key="item.name" 
-                class="grid grid-cols-2 py-3 border-b border-ctp-surface0 items-center group transition-all duration-300 group-hover/stack:opacity-30 hover:opacity-100!">
+            <div v-for="item in group" :key="item.name" class="grid grid-cols-2 py-1.5 items-center group transition-all duration-300 group-hover/stack:opacity-30 hover:!opacity-100">
               <div class="flex items-center gap-3">
                 <img :src="item.icon" class="w-4 h-4 transition-all duration-300" 
                     v-if="item.icon" :alt="item.name" />
@@ -46,6 +56,8 @@ const stackItems = [
   
   // Infrastructure
   { name: 'aws', category: 'infrastructure', description: 'cloud provider', icon: 'https://www.google.com/s2/favicons?domain=aws.amazon.com&sz=32' },
+  { name: 'cloudflare', category: 'infrastructure', description: 'cdn & dns', icon: 'https://www.google.com/s2/favicons?domain=cloudflare.com&sz=32' },
+  { name: 'proxmox', category: 'infrastructure', description: 'hypervisor', icon: 'https://www.google.com/s2/favicons?domain=proxmox.com&sz=32' },
   { name: 'terraform', category: 'infrastructure', description: 'iac', icon: 'https://www.google.com/s2/favicons?domain=terraform.io&sz=32' },
   { name: 'docker', category: 'infrastructure', description: 'containerization', icon: 'https://www.google.com/s2/favicons?domain=docker.com&sz=32' },
   
