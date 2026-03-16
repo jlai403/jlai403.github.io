@@ -1,19 +1,10 @@
 <template>
-  <div
-    id="stack-page"
-    class="flex justify-center w-full min-h-full py-8 md:py-12 px-6"
-  >
+  <div id="stack-page" class="flex justify-center w-full min-h-full py-8 md:py-12 px-6" >
     <div class="max-w-[500px] w-full text-left">
       <div class="flex justify-between items-baseline mb-8">
         <div class="flex items-baseline gap-4">
           <h1 class="font-bold mb-0">stack</h1>
-          <a
-            href="https://github.com/jlai403/.dotfiles"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-[12px] !no-underline"
-            >.dotfiles</a
-          >
+          <a href="https://github.com/jlai403/.dotfiles" target="_blank" rel="noopener noreferrer" class="text-[12px] !no-underline">.dotfiles</a>
         </div>
         <div class="flex items-center gap-2">
           <router-link to="/" class="text-[12px] !no-underline">index</router-link>
@@ -23,9 +14,7 @@
 
       <div class="w-full">
         <div v-for="(group, groupName) in groupedStack" :key="groupName" class="mb-8 last:mb-0">
-          <div
-            class="grid grid-cols-2 pb-2 mb-2 opacity-40 text-[10px] uppercase tracking-wider font-bold"
-          >
+          <div class="grid grid-cols-2 pb-2 mb-2 opacity-40 text-[10px] uppercase tracking-wider font-bold">
             <div>{{ groupName }}</div>
             <div>description</div>
           </div>
@@ -60,7 +49,7 @@ const stackItems = [
   
   // Infrastructure
   { name: 'aws', category: 'infrastructure', description: 'cloud provider', icon: 'https://www.google.com/s2/favicons?domain=aws.amazon.com&sz=32' },
-  { name: 'cloudflare', category: 'infrastructure', description: 'cdn & dns', icon: 'https://www.google.com/s2/favicons?domain=cloudflare.com&sz=32' },
+  { name: 'cloudflare', category: 'infrastructure', description: 'zero trust', icon: 'https://www.google.com/s2/favicons?domain=cloudflare.com&sz=32' },
   { name: 'proxmox', category: 'infrastructure', description: 'hypervisor', icon: 'https://www.google.com/s2/favicons?domain=proxmox.com&sz=32' },
   { name: 'terraform', category: 'infrastructure', description: 'iac', icon: 'https://www.google.com/s2/favicons?domain=terraform.io&sz=32' },
   { name: 'docker', category: 'infrastructure', description: 'containerization', icon: 'https://www.google.com/s2/favicons?domain=docker.com&sz=32' },
@@ -82,11 +71,11 @@ const stackItems = [
   { name: 'obsidian', category: 'apps', description: 'knowledge base', icon: 'https://www.google.com/s2/favicons?domain=obsidian.md&sz=32' },
   { name: 'notion', category: 'apps', description: 'documentation', icon: 'https://www.google.com/s2/favicons?domain=notion.so&sz=32' },
   
-  // Terminal / Workflow
+  // Terminal
   { name: 'ghostty', category: 'terminal', description: 'terminal emulator', icon: 'https://www.google.com/s2/favicons?domain=ghostty.org&sz=32' },
   { name: 'tmux', category: 'terminal', description: 'terminal multiplexer', icon: 'https://raw.githubusercontent.com/tmux/tmux/refs/heads/master/logo/favicon.ico' },
   { name: 'starship', category: 'terminal', description: 'cross-shell prompt', icon: 'https://www.google.com/s2/favicons?domain=starship.rs&sz=32' },
-  { name: 'opencode', category: 'terminal', description: 'open source tools', icon: 'https://www.google.com/s2/favicons?domain=opencode.ai&sz=32' },
+  { name: 'opencode', category: 'terminal', description: 'ai coding agent', icon: 'https://www.google.com/s2/favicons?domain=opencode.ai&sz=32' },
 ]
 
 const groupedStack = computed(() => {
