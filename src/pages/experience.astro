@@ -1,0 +1,62 @@
+---
+import Base from '../layouts/Base.astro';
+import ThemeToggle from '../components/ThemeToggle.svelte';
+import { getCurrentJobs, getPastJobs } from '../data/experience';
+
+const currentJobs = getCurrentJobs();
+const pastJobs = getPastJobs();
+---
+
+<Base title="joey lai • experience">
+  <div id="experience-page" class="flex justify-center w-full min-h-full py-8 md:py-12 px-6">
+    <div class="max-w-[500px] w-full text-left">
+      <div class="flex justify-between items-baseline mb-8">
+        <h1 class="font-bold mb-0">experience</h1>
+        <div class="flex items-center gap-2">
+          <a href="/" class="text-[12px] !no-underline">index</a>
+          <ThemeToggle client:load />
+        </div>
+      </div>
+
+      <div class="w-full">
+        <div class="mb-8">
+          <div class="grid grid-cols-2 pb-2 mb-4 opacity-40 text-[10px] uppercase tracking-wider font-bold">
+            <div>current roles</div>
+            <div class="text-right">period</div>
+          </div>
+
+          <div class="space-y-4 text-[13px] group/stack">
+            {currentJobs.map((job) => (
+              <div class="grid grid-cols-2 py-0 items-start group transition-all duration-300 group-hover/stack:opacity-30 hover:!opacity-100">
+                <div class="flex flex-col">
+                  <span class="font-medium lowercase mb-0.5 leading-tight">{job.company}</span>
+                  <span class="text-[11px] text-text-secondary lowercase transition-opacity group-hover:opacity-100">{job.role}</span>
+                </div>
+                <div class="text-text-secondary lowercase text-right tabular-nums pt-0.5">{job.duration}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div class="mb-8 last:mb-0">
+          <div class="grid grid-cols-2 pb-2 mb-4 opacity-40 text-[10px] uppercase tracking-wider font-bold">
+            <div>past roles</div>
+            <div class="text-right">period</div>
+          </div>
+
+          <div class="space-y-4 text-[13px] group/stack">
+            {pastJobs.map((job) => (
+              <div class="grid grid-cols-2 py-0 items-start group transition-all duration-300 group-hover/stack:opacity-30 hover:!opacity-100">
+                <div class="flex flex-col">
+                  <span class="font-medium lowercase mb-0.5 leading-tight">{job.company}</span>
+                  <span class="text-[11px] text-text-secondary lowercase transition-opacity group-hover:opacity-100">{job.role}</span>
+                </div>
+                <div class="text-text-secondary lowercase text-right tabular-nums pt-0.5">{job.duration}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Base>
