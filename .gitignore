@@ -91,3 +91,6 @@ test/e2e/reports
 selenium-debug.log
 dist
 *.tsbuildinfo
+
+# Plans
+.opencode/plans
