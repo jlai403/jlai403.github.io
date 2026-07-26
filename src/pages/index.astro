@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+import selfImg from '../../public/img/self.png';
 import Base from '../layouts/Base.astro';
 import ThemeToggle from '../components/ThemeToggle.svelte';
 import Typewriter from '../components/Typewriter.svelte';
@@ -12,7 +14,7 @@ import Typewriter from '../components/Typewriter.svelte';
       </div>
 
       <div class="flex flex-row gap-6 md:gap-8 items-start mb-12">
-        <img src="/img/self.png" alt="Joey Lai" class="w-20 h-20 rounded-full border border-gray-100 flex-shrink-0" />
+        <Image src={selfImg} alt="Joey Lai" width={80} height={80} class="w-20 h-20 rounded-full border border-gray-100 flex-shrink-0" />
         <div class="flex-1 mt-1">
           <h1 class="font-bold mb-1">joey lai</h1>
           <p class="text-text-secondary mb-2 block">calgary, ab</p>
