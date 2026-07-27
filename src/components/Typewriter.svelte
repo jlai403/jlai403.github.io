@@ -66,42 +66,9 @@
   <p class="whitespace-pre-wrap">
     <span>{p1Text}</span>{#if typingPhase === 1}<span class="blinking-cursor"></span>{/if}
   </p>
-  {#if typingPhase >= 2}
-    <p class="whitespace-pre-wrap">
-      <span>{p2Text}</span>
-      {#if typingPhase === 2}<span class="blinking-cursor"></span>{/if}
-      {#if typingPhase >= 3}
-        <a href="https://stellaralgo.com" target="_blank" rel="noopener noreferrer" class="!no-underline">
-          <span>{p2Link}</span>
-          {#if typingPhase === 3}<span class="blinking-cursor"></span>{/if}
-        </a>
-      {/if}
-    </p>
-  {/if}
-  {#if typingPhase >= 4}
-    <p class="whitespace-pre-wrap">
-      <span>{p3Text}</span>
-      {#if typingPhase === 4}<span class="blinking-cursor"></span>{/if}
-      {#if typingPhase >= 5}
-        <a href={experienceHref} class="!no-underline">
-          <span>{p3Link}</span>
-          {#if typingPhase === 5}<span class="blinking-cursor"></span>{/if}
-        </a>
-      {/if}
-    </p>
-  {/if}
-  {#if typingPhase >= 6}
-    <p class="whitespace-pre-wrap mb-0">
-      <span>{p4Text}</span>
-      {#if typingPhase === 6}<span class="blinking-cursor"></span>{/if}
-      {#if typingPhase >= 7}
-        <a href={stackHref} class="!no-underline">
-          <span>{p4Link}</span>
-          {#if typingPhase === 7}<span class="blinking-cursor"></span>{/if}
-        </a>
-      {/if}
-    </p>
-  {/if}
+  {#if typingPhase >= 2}<p class="whitespace-pre-wrap"><span>{p2Text}</span>{#if typingPhase === 2}<span class="blinking-cursor"></span>{/if}{#if typingPhase >= 3}<a href="https://stellaralgo.com" target="_blank" rel="noopener noreferrer" class="!no-underline"><span>{p2Link}</span>{#if typingPhase === 3}<span class="blinking-cursor"></span>{/if}</a>{/if}</p>{/if}
+  {#if typingPhase >= 4}<p class="whitespace-pre-wrap"><span>{p3Text}</span>{#if typingPhase === 4}<span class="blinking-cursor"></span>{/if}{#if typingPhase >= 5}<a href={experienceHref} class="!no-underline"><span>{p3Link}</span>{#if typingPhase === 5}<span class="blinking-cursor"></span>{/if}</a>{/if}</p>{/if}
+  {#if typingPhase >= 6}<p class="whitespace-pre-wrap mb-0"><span>{p4Text}</span>{#if typingPhase === 6}<span class="blinking-cursor"></span>{/if}{#if typingPhase >= 7}<a href={stackHref} class="!no-underline"><span>{p4Link}</span>{#if typingPhase === 7}<span class="blinking-cursor"></span>{/if}</a>{/if}</p>{/if}
 </div>
 
 {#if typingPhase >= 8}
