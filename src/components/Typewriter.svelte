@@ -14,6 +14,18 @@
   let typingPhase = $state(0);
 
   $effect(() => {
+    if (typeof sessionStorage !== 'undefined' && sessionStorage.getItem('typewriter-done')) {
+      p1Text = "software developer, tinkerer and lifelong learner. passionate about emerging tech, product and solving customer problems.";
+      p2Text = "leading engineering at ";
+      p2Link = "stellaralgo";
+      p3Text = "check out what I've done ";
+      p3Link = "before";
+      p4Text = "here are some of the ";
+      p4Link = "tools I love to use";
+      typingPhase = 8;
+      return;
+    }
+
     const steps = [
       { text: "software developer, tinkerer and lifelong learner. passionate about emerging tech, product and solving customer problems.", phase: 1, delay: 200 },
       { text: "leading engineering at ", phase: 2 },
@@ -56,6 +68,7 @@
         if (step.delay) await new Promise(r => setTimeout(r, step.delay));
       }
       typingPhase = 8;
+      sessionStorage.setItem('typewriter-done', '1');
     }
     run();
     return () => { cancelled = true; };
