@@ -30,7 +30,7 @@ export const stackItems: StackItem[] = [
   { name: '1password', category: 'apps', description: 'security', icon: 'https://www.google.com/s2/favicons?domain=1password.com&sz=32' },
   { name: 'obsidian', category: 'apps', description: 'knowledge base', icon: 'https://www.google.com/s2/favicons?domain=obsidian.md&sz=32' },
   { name: 'notion', category: 'apps', description: 'documentation', icon: 'https://www.google.com/s2/favicons?domain=notion.so&sz=32' },
-  { name: 'harper', category: 'apps', description: 'grammar checker', icon: 'https://www.google.com/s2/favicons?domain=github.com/Automattic/harper&sz=32' },
+  { name: 'harper', category: 'apps', description: 'grammar checker', icon: 'https://www.google.com/s2/favicons?domain=writewithharper.com&sz=32' },
   { name: 'ghostty', category: 'terminal', description: 'terminal emulator', icon: 'https://www.google.com/s2/favicons?domain=ghostty.org&sz=32' },
   { name: 'tmux', category: 'terminal', description: 'terminal multiplexer', icon: 'https://raw.githubusercontent.com/tmux/tmux/refs/heads/master/logo/favicon.ico' },
   { name: 'starship', category: 'terminal', description: 'cross-shell prompt', icon: 'https://www.google.com/s2/favicons?domain=starship.rs&sz=32' },
