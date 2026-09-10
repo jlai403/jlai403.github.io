@@ -153,7 +153,7 @@
           >
             <span class="cmdk-left">
               {#if item.type === 'nav'}
-                <i class="fa fa-long-arrow-right cmdk-icon"></i>
+                <span class="cmdk-icon">→</span>
               {:else if item.type === 'external'}
                 <i class="fa fa-external-link cmdk-icon"></i>
               {:else}
