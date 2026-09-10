@@ -14,6 +14,7 @@ export const stackItems: StackItem[] = [
   { name: 'tailwindcss', category: 'languages', description: 'styling', icon: 'https://www.google.com/s2/favicons?domain=tailwindcss.com&sz=32' },
   { name: 'aws', category: 'infrastructure', description: 'cloud provider', icon: 'https://www.google.com/s2/favicons?domain=aws.amazon.com&sz=32' },
   { name: 'cloudflare', category: 'infrastructure', description: 'zero trust', icon: 'https://www.google.com/s2/favicons?domain=cloudflare.com&sz=32' },
+  { name: 'tailscale', category: 'infrastructure', description: 'wireguard vpn', icon: 'https://www.google.com/s2/favicons?domain=tailscale.com&sz=32' },
   { name: 'osx', category: 'os', description: 'macos', icon: 'https://www.google.com/s2/favicons?domain=apple.com&sz=32' },
   { name: 'omarchy', category: 'os', description: 'arch linux', icon: 'https://www.google.com/s2/favicons?domain=omarchy.org&sz=32' },
   { name: 'proxmox', category: 'os', description: 'hypervisor', icon: 'https://www.google.com/s2/favicons?domain=proxmox.com&sz=32' },

@@ -1,4 +1,6 @@
 ---
+import CmdK from '../components/CmdK.svelte';
+
 interface Props {
   title: string;
   description?: string;
@@ -48,6 +50,7 @@ const { title, description = "portfolio, bio, and dev stack of joey lai." } = As
   </head>
   <body>
     <slot />
+    <CmdK client:load />
   </body>
 </html>
 
