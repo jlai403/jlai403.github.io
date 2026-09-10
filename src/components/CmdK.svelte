@@ -6,6 +6,7 @@
   let activeIndex = $state(0);
   let isDark = $state(false);
   let showToast = $state(false);
+  let hiding = $state(false);
   let inputEl;
 
   function toggleTheme() {
@@ -99,20 +100,28 @@
   onMount(() => {
     if (sessionStorage.getItem('cmdk-hint-shown')) return;
     const showTimer = setTimeout(() => (showToast = true), 1200);
-    const hideTimer = setTimeout(() => (showToast = false), 7200);
-    const dismiss = () => (showToast = false);
-    window.addEventListener('keydown', dismiss);
-    window.addEventListener('click', dismiss);
-    window.addEventListener('scroll', dismiss, { passive: true });
+    const hideTimer = setTimeout(hideToast, 7200);
+    window.addEventListener('keydown', hideToast);
+    window.addEventListener('click', hideToast);
+    window.addEventListener('scroll', hideToast, { passive: true });
     sessionStorage.setItem('cmdk-hint-shown', '1');
     return () => {
       clearTimeout(showTimer);
       clearTimeout(hideTimer);
-      window.removeEventListener('keydown', dismiss);
-      window.removeEventListener('click', dismiss);
-      window.removeEventListener('scroll', dismiss);
+      window.removeEventListener('keydown', hideToast);
+      window.removeEventListener('click', hideToast);
+      window.removeEventListener('scroll', hideToast);
     };
   });
+
+  function hideToast() {
+    if (!showToast || hiding) return;
+    hiding = true;
+    setTimeout(() => {
+      showToast = false;
+      hiding = false;
+    }, 300);
+  }
 </script>
 
 <svelte:window onkeydown={onGlobalKey} />
@@ -144,7 +153,7 @@
           >
             <span class="cmdk-left">
               {#if item.type === 'nav'}
-                <i class="fa fa-arrow-right cmdk-icon"></i>
+                <i class="fa fa-long-arrow-right cmdk-icon"></i>
               {:else if item.type === 'external'}
                 <i class="fa fa-external-link cmdk-icon"></i>
               {:else}
@@ -164,7 +173,7 @@
 {/if}
 
 {#if showToast}
-  <div class="cmdk-toast">press <kbd>⌘K</kbd> to jump around</div>
+  <div class="cmdk-toast" class:hiding={hiding}>press <kbd>⌘K</kbd> to jump around</div>
 {/if}
 
 <style>
@@ -279,7 +288,13 @@
     border-radius: 999px;
     opacity: 0.55;
     pointer-events: none;
+    transition: opacity 300ms ease, transform 300ms ease;
     animation: cmdk-toast-in 400ms ease-out;
+  }
+
+  .cmdk-toast.hiding {
+    opacity: 0;
+    transform: translate(-50%, 6px);
   }
 
   .cmdk-toast kbd {
