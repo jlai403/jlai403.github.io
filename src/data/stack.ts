@@ -14,7 +14,9 @@ export const stackItems: StackItem[] = [
   { name: 'tailwindcss', category: 'languages', description: 'styling', icon: 'https://www.google.com/s2/favicons?domain=tailwindcss.com&sz=32' },
   { name: 'aws', category: 'infrastructure', description: 'cloud provider', icon: 'https://www.google.com/s2/favicons?domain=aws.amazon.com&sz=32' },
   { name: 'cloudflare', category: 'infrastructure', description: 'zero trust', icon: 'https://www.google.com/s2/favicons?domain=cloudflare.com&sz=32' },
-  { name: 'proxmox', category: 'infrastructure', description: 'hypervisor', icon: 'https://www.google.com/s2/favicons?domain=proxmox.com&sz=32' },
+  { name: 'osx', category: 'os', description: 'macos', icon: 'https://www.google.com/s2/favicons?domain=apple.com&sz=32' },
+  { name: 'omarchy', category: 'os', description: 'arch linux', icon: 'https://www.google.com/s2/favicons?domain=omarchy.org&sz=32' },
+  { name: 'proxmox', category: 'os', description: 'hypervisor', icon: 'https://www.google.com/s2/favicons?domain=proxmox.com&sz=32' },
   { name: 'terraform', category: 'infrastructure', description: 'iac', icon: 'https://www.google.com/s2/favicons?domain=terraform.io&sz=32' },
   { name: 'docker', category: 'infrastructure', description: 'containerization', icon: 'https://www.google.com/s2/favicons?domain=docker.com&sz=32' },
   { name: 'mongodb', category: 'databases', description: 'nosql store', icon: 'https://www.google.com/s2/favicons?domain=mongodb.com&sz=32' },
@@ -42,6 +44,7 @@ export type StackGroup = Record<string, StackItem[]>;
 
 export function getGroupedStack(): StackGroup {
   const groups: StackGroup = {
+    'operating systems': [],
     'languages / frontend': [],
     'infrastructure': [],
     'databases': [],
@@ -50,7 +53,8 @@ export function getGroupedStack(): StackGroup {
   };
 
   for (const item of stackItems) {
-    if (item.category === 'languages') groups['languages / frontend'].push(item);
+    if (item.category === 'os') groups['operating systems'].push(item);
+    else if (item.category === 'languages') groups['languages / frontend'].push(item);
     else if (item.category === 'infrastructure') groups['infrastructure'].push(item);
     else if (item.category === 'databases') groups['databases'].push(item);
     else if (item.category === 'apps') groups['software'].push(item);
