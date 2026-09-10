@@ -3,13 +3,15 @@ import { Image } from 'astro:assets';
 import selfImg from '../../public/img/self.png';
 import Base from '../layouts/Base.astro';
 import ThemeToggle from '../components/ThemeToggle.svelte';
+import CmdKTrigger from '../components/CmdKTrigger.svelte';
 import Typewriter from '../components/Typewriter.svelte';
 ---
 
 <Base title="joey lai • software developer">
   <div id="homepage" class="flex justify-center w-full min-h-full py-8 md:py-12 px-6">
     <div class="max-w-[500px] w-full text-left relative">
-      <div class="absolute -top-2 right-0">
+      <div class="absolute -top-2 right-0 flex items-center gap-2">
+        <CmdKTrigger client:load />
         <ThemeToggle client:load />
       </div>
 

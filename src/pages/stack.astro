@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import ThemeToggle from '../components/ThemeToggle.svelte';
+import CmdKTrigger from '../components/CmdKTrigger.svelte';
 import { getGroupedStack } from '../data/stack';
 
 const groupedStack = getGroupedStack();
@@ -16,6 +17,7 @@ const groupedStack = getGroupedStack();
         </div>
         <div class="flex items-center gap-2">
           <a href="/" class="text-[12px] !no-underline">index</a>
+          <CmdKTrigger client:load />
           <ThemeToggle client:load />
         </div>
       </div>

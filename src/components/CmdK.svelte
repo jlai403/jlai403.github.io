@@ -1,7 +1,11 @@
 <script>
+  import { onMount } from 'svelte';
+
   let open = $state(false);
   let query = $state('');
   let activeIndex = $state(0);
+  let isDark = $state(false);
+  let showToast = $state(false);
   let inputEl;
 
   function toggleTheme() {
@@ -44,7 +48,19 @@
     close();
   }
 
+  function onOpenRequest() {
+    query = '';
+    activeIndex = 0;
+    open = true;
+    inputEl?.focus();
+  }
+
   function onGlobalKey(event) {
+    if (event.key === 'Escape' && open) {
+      event.preventDefault();
+      close();
+      return;
+    }
     if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === 'k') {
       event.preventDefault();
       if (open) close();
@@ -61,6 +77,41 @@
 
   $effect(() => {
     if (open && inputEl) inputEl.focus();
+  });
+
+  $effect(() => {
+    const syncTheme = () => {
+      const theme = document.documentElement.getAttribute('data-theme');
+      isDark = theme ? theme === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    };
+    syncTheme();
+    const observer = new MutationObserver(syncTheme);
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+    return () => observer.disconnect();
+  });
+
+  $effect(() => {
+    function onOpen() { onOpenRequest(); }
+    window.addEventListener('cmdk:open', onOpen);
+    return () => window.removeEventListener('cmdk:open', onOpen);
+  });
+
+  onMount(() => {
+    if (sessionStorage.getItem('cmdk-hint-shown')) return;
+    const showTimer = setTimeout(() => (showToast = true), 1200);
+    const hideTimer = setTimeout(() => (showToast = false), 7200);
+    const dismiss = () => (showToast = false);
+    window.addEventListener('keydown', dismiss);
+    window.addEventListener('click', dismiss);
+    window.addEventListener('scroll', dismiss, { passive: true });
+    sessionStorage.setItem('cmdk-hint-shown', '1');
+    return () => {
+      clearTimeout(showTimer);
+      clearTimeout(hideTimer);
+      window.removeEventListener('keydown', dismiss);
+      window.removeEventListener('click', dismiss);
+      window.removeEventListener('scroll', dismiss);
+    };
   });
 </script>
 
@@ -91,7 +142,16 @@
             onclick={() => select(item)}
             onmouseenter={() => (activeIndex = i)}
           >
-            <span>{item.label}</span>
+            <span class="cmdk-left">
+              {#if item.type === 'nav'}
+                <i class="fa fa-arrow-right cmdk-icon"></i>
+              {:else if item.type === 'external'}
+                <i class="fa fa-external-link cmdk-icon"></i>
+              {:else}
+                <i class="fa cmdk-icon" class:fa-sun-o={!isDark} class:fa-moon-o={isDark}></i>
+              {/if}
+              <span>{item.label}</span>
+            </span>
             <span class="cmdk-hint">{item.hint}</span>
           </button>
         {/each}
@@ -101,6 +161,10 @@
       </div>
     </div>
   </div>
+{/if}
+
+{#if showToast}
+  <div class="cmdk-toast">press <kbd>⌘K</kbd> to jump around</div>
 {/if}
 
 <style>
@@ -172,6 +236,19 @@
     background: color-mix(in srgb, var(--color-text-primary) 8%, transparent);
   }
 
+  .cmdk-left {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .cmdk-icon {
+    width: 14px;
+    text-align: center;
+    font-size: 12px;
+    opacity: 0.4;
+  }
+
   .cmdk-hint {
     color: var(--color-text-secondary);
     font-size: 11px;
@@ -185,6 +262,36 @@
     opacity: 0.6;
   }
 
+  .cmdk-toast {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 40;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    font-size: 12px;
+    color: var(--color-text-secondary);
+    background: color-mix(in srgb, var(--color-bg-primary) 85%, transparent);
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    opacity: 0.55;
+    pointer-events: none;
+    animation: cmdk-toast-in 400ms ease-out;
+  }
+
+  .cmdk-toast kbd {
+    padding: 1px 5px;
+    font-family: inherit;
+    font-size: 11px;
+    color: var(--color-text-primary);
+    background: color-mix(in srgb, var(--color-text-primary) 8%, transparent);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+  }
+
   @keyframes cmdk-fade {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -193,5 +300,16 @@
   @keyframes cmdk-rise {
     from { opacity: 0; transform: translateY(-6px); }
     to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes cmdk-toast-in {
+    from { opacity: 0; transform: translate(-50%, 6px); }
+    to { opacity: 0.55; transform: translate(-50%, 0); }
+  }
+
+  @media (hover: none) {
+    .cmdk-toast {
+      display: none;
+    }
   }
 </style>
