@@ -24,7 +24,6 @@ export const stackItems: StackItem[] = [
   { name: 'sqlite', category: 'databases', description: 'embedded database', icon: 'https://www.google.com/s2/favicons?domain=sqlite.org&sz=32' },
   { name: 'duckdb', category: 'databases', description: 'analytical database', icon: 'https://www.google.com/s2/favicons?domain=duckdb.org&sz=32' },
   { name: 'zed', category: 'apps', description: 'primary editor', icon: 'https://www.google.com/s2/favicons?domain=zed.dev&sz=32' },
-  { name: 'antigravity', category: 'apps', description: 'agentic coding assistant', icon: 'https://www.google.com/s2/favicons?domain=antigravity.google.com&sz=32' },
   { name: 'zen browser', category: 'apps', description: 'primary browser', icon: 'https://www.google.com/s2/favicons?domain=zen-browser.app&sz=32' },
   { name: 'raycast', category: 'apps', description: 'productivity', icon: 'https://www.google.com/s2/favicons?domain=raycast.com&sz=32' },
   { name: 'aerospace', category: 'apps', description: 'tiling window manager', icon: 'https://www.google.com/s2/favicons?domain=nikitabobko.github.io/AeroSpace/guide&sz=32' },
