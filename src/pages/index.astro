@@ -1,0 +1,67 @@
+---
+import { Image } from 'astro:assets';
+import selfImg from '../../public/img/self.png';
+import Base from '../layouts/Base.astro';
+import ThemeToggle from '../components/ThemeToggle.svelte';
+import CmdKTrigger from '../components/CmdKTrigger.svelte';
+import Typewriter from '../components/Typewriter.svelte';
+---
+
+<Base title="joey lai • software developer">
+  <div id="homepage" class="flex justify-center w-full min-h-full py-8 md:py-12 px-6">
+    <div class="max-w-[500px] w-full text-left relative">
+      <div class="absolute -top-2 right-0 flex items-center gap-2">
+        <CmdKTrigger client:load />
+        <ThemeToggle client:load />
+      </div>
+
+      <div class="flex flex-row gap-6 md:gap-8 items-start mb-12">
+        <Image src={selfImg} alt="Joey Lai" width={80} height={80} loading="eager" class="w-20 h-20 rounded-full border border-gray-100 flex-shrink-0" />
+        <div class="flex-1 mt-1">
+          <h1 class="font-bold mb-1">joey lai</h1>
+          <p class="text-text-secondary mb-2 block">calgary, ab</p>
+          <div class="flex items-center gap-4 text-[14px] opacity-30 -ml-0.5">
+            <a href="https://ca.linkedin.com/in/jlai403" target="_blank" rel="noopener noreferrer" class="social-icon linkedin" aria-label="LinkedIn">
+              <i class="fa fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/jlai403" target="_blank" rel="noopener noreferrer" class="social-icon github" aria-label="GitHub">
+              <i class="fa fa-github"></i>
+            </a>
+            <a href="https://instagram.com/_jlai/" target="_blank" rel="noopener noreferrer" class="social-icon instagram" aria-label="Instagram">
+              <i class="fa fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-8 opacity-20 text-text-primary">—</div>
+
+      <noscript>
+        <p class="whitespace-pre-wrap mb-8">
+          check out what I've done <a href="/experience" class="!no-underline">before</a>,
+          and here are some of the <a href="/stack" class="!no-underline">tools I love to use</a>.
+        </p>
+      </noscript>
+
+      <Typewriter client:load experienceHref="/experience" stackHref="/stack" />
+    </div>
+  </div>
+
+  <style>
+    .social-icon {
+      text-decoration: none !important;
+      transition-property: all;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 300ms;
+      color: var(--color-text-primary) !important;
+      font-style: normal;
+    }
+    .social-icon:hover {
+      opacity: 1;
+      transform: translateY(-2px);
+    }
+    .social-icon.linkedin:hover { color: var(--color-ctp-blue) !important; }
+    .social-icon.github:hover { color: var(--color-ctp-mauve) !important; }
+    .social-icon.instagram:hover { color: var(--color-ctp-pink) !important; }
+  </style>
+</Base>

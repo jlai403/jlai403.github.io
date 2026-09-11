@@ -3,7 +3,7 @@
 
 @theme {
   --font-mono: "JetBrains Mono", "Cascadia Code", "SF Mono", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", monospace;
-  
+
   /* Catppuccin Latte Palette */
   --color-latte-rosewater: #dc8a78;
   --color-latte-flamingo: #dd7878;
@@ -60,7 +60,7 @@
   --color-frappe-mantle: #292c3c;
   --color-frappe-crust: #232634;
 
-  /* Default Theme Variables (System Default - Latte for light, Frappé for dark) */
+  /* Default Theme Variables */
   --color-bg-primary: var(--color-latte-base);
   --color-text-primary: var(--color-latte-text);
   --color-text-secondary: var(--color-latte-subtext0);
@@ -69,6 +69,13 @@
   --color-border: var(--color-latte-surface0);
   --color-selection-bg: var(--color-latte-surface2);
   --color-selection-text: var(--color-latte-rosewater);
+}
+
+/* CTP aliases for social icon hover colors */
+:root {
+  --color-ctp-blue: var(--color-latte-blue);
+  --color-ctp-mauve: var(--color-latte-mauve);
+  --color-ctp-pink: var(--color-latte-pink);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -81,6 +88,9 @@
     --color-border: var(--color-frappe-surface0);
     --color-selection-bg: var(--color-frappe-surface2);
     --color-selection-text: var(--color-frappe-rosewater);
+    --color-ctp-blue: var(--color-frappe-blue);
+    --color-ctp-mauve: var(--color-frappe-mauve);
+    --color-ctp-pink: var(--color-frappe-pink);
   }
 }
 
@@ -93,6 +103,9 @@
   --color-border: var(--color-latte-surface0);
   --color-selection-bg: var(--color-latte-surface2);
   --color-selection-text: var(--color-latte-rosewater);
+  --color-ctp-blue: var(--color-latte-blue);
+  --color-ctp-mauve: var(--color-latte-mauve);
+  --color-ctp-pink: var(--color-latte-pink);
 }
 
 :root[data-theme='dark'] {
@@ -104,11 +117,13 @@
   --color-border: var(--color-frappe-surface0);
   --color-selection-bg: var(--color-frappe-surface2);
   --color-selection-text: var(--color-frappe-rosewater);
+  --color-ctp-blue: var(--color-frappe-blue);
+  --color-ctp-mauve: var(--color-frappe-mauve);
+  --color-ctp-pink: var(--color-frappe-pink);
 }
 
 body,
-html,
-#root {
+html {
   @apply h-full w-full font-mono bg-bg-primary text-text-primary antialiased text-[14px] leading-[22px] font-[400] tracking-[-0.1px] selection:bg-selection-bg selection:text-selection-text;
 }
 
@@ -175,13 +190,6 @@ a:hover {
 .fadeIn.two { @apply animate-fade-in-2s; }
 .fadeIn.four { @apply animate-fade-in-4s; }
 .fadeIn.six { @apply animate-fade-in-6s; }
-
-
-
-
-.center.text {
-  @apply text-center;
-}
 
 .social-icon {
   @apply no-underline inline-flex items-center justify-center rounded-lg mx-[2px];
