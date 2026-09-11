@@ -36,6 +36,13 @@ import Typewriter from '../components/Typewriter.svelte';
 
       <div class="mb-8 opacity-20 text-text-primary">—</div>
 
+      <noscript>
+        <p class="whitespace-pre-wrap mb-8">
+          check out what I've done <a href="/experience" class="!no-underline">before</a>,
+          and here are some of the <a href="/stack" class="!no-underline">tools I love to use</a>.
+        </p>
+      </noscript>
+
       <Typewriter client:load experienceHref="/experience" stackHref="/stack" />
     </div>
   </div>

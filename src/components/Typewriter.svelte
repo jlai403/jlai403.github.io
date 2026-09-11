@@ -14,7 +14,7 @@
   let typingPhase = $state(0);
 
   $effect(() => {
-    if (typeof sessionStorage !== 'undefined' && sessionStorage.getItem('typewriter-done')) {
+    function showFinal() {
       p1Text = "software developer, tinkerer and lifelong learner. passionate about emerging tech, product and solving customer problems.";
       p2Text = "leading engineering at ";
       p2Link = "stellaralgo";
@@ -23,6 +23,11 @@
       p4Text = "here are some of the ";
       p4Link = "tools I love to use";
       typingPhase = 8;
+    }
+
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reducedMotion || sessionStorage.getItem('typewriter-done')) {
+      showFinal();
       return;
     }
 
@@ -75,13 +80,21 @@
   });
 </script>
 
+{#snippet typedLine({ text, textPhase, link, linkPhase, href, external = false, last = false })}
+  <p class="whitespace-pre-wrap{last ? ' mb-0' : ''}"><span>{text}</span>{#if typingPhase === textPhase}<span class="blinking-cursor"></span>{/if}{#if linkPhase && typingPhase >= linkPhase}<a href={href} target={external ? '_blank' : undefined} rel={external ? 'noopener noreferrer' : undefined} class="!no-underline"><span>{link}</span>{#if typingPhase === linkPhase}<span class="blinking-cursor"></span>{/if}</a>{/if}</p>
+{/snippet}
+
 <div class="space-y-6 mb-8">
-  <p class="whitespace-pre-wrap">
-    <span>{p1Text}</span>{#if typingPhase === 1}<span class="blinking-cursor"></span>{/if}
-  </p>
-  {#if typingPhase >= 2}<p class="whitespace-pre-wrap"><span>{p2Text}</span>{#if typingPhase === 2}<span class="blinking-cursor"></span>{/if}{#if typingPhase >= 3}<a href="https://stellaralgo.com" target="_blank" rel="noopener noreferrer" class="!no-underline"><span>{p2Link}</span>{#if typingPhase === 3}<span class="blinking-cursor"></span>{/if}</a>{/if}</p>{/if}
-  {#if typingPhase >= 4}<p class="whitespace-pre-wrap"><span>{p3Text}</span>{#if typingPhase === 4}<span class="blinking-cursor"></span>{/if}{#if typingPhase >= 5}<a href={experienceHref} class="!no-underline"><span>{p3Link}</span>{#if typingPhase === 5}<span class="blinking-cursor"></span>{/if}</a>{/if}</p>{/if}
-  {#if typingPhase >= 6}<p class="whitespace-pre-wrap mb-0"><span>{p4Text}</span>{#if typingPhase === 6}<span class="blinking-cursor"></span>{/if}{#if typingPhase >= 7}<a href={stackHref} class="!no-underline"><span>{p4Link}</span>{#if typingPhase === 7}<span class="blinking-cursor"></span>{/if}</a>{/if}</p>{/if}
+  {@render typedLine({ text: p1Text, textPhase: 1 })}
+  {#if typingPhase >= 2}
+    {@render typedLine({ text: p2Text, textPhase: 2, link: p2Link, linkPhase: 3, href: 'https://stellaralgo.com', external: true })}
+  {/if}
+  {#if typingPhase >= 4}
+    {@render typedLine({ text: p3Text, textPhase: 4, link: p3Link, linkPhase: 5, href: experienceHref })}
+  {/if}
+  {#if typingPhase >= 6}
+    {@render typedLine({ text: p4Text, textPhase: 6, link: p4Link, linkPhase: 7, href: stackHref, last: true })}
+  {/if}
 </div>
 
 {#if typingPhase >= 8}
@@ -98,6 +111,12 @@
     background-color: var(--color-text-primary);
     animation: blink 1s step-end infinite;
     vertical-align: -0.1em;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .blinking-cursor {
+      animation: none;
+    }
   }
 
   @keyframes blink {
