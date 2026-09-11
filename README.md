@@ -1,41 +1,42 @@
-# jlai403.github.io
+# jlai.ca
 
-A simplified portfolio website built with Vue 3, Vite, and Tailwind CSS.
+Portfolio for Joey Lai. Astro renders the pages, Svelte 5 runs the interactive
+pieces (theme toggle, command palette, typewriter), Tailwind handles styling,
+and a Cloudflare Worker serves the static output.
 
-## Project Structure
+## Stack
 
-This project has been simplified to focus on a clean, modern hero section with social links.
+- Astro 7, static output
+- Svelte 5 for interactive islands
+- Tailwind CSS 4
+- TypeScript
+- Cloudflare Workers static assets, deployed with Wrangler
 
-- **Stack**: Vue 3 (Composition API), Vite, TypeScript, Tailwind CSS.
-- **Styling**: Modern, premium design with a focus on visual excellence.
+## Layout
 
-## Local Development
+    src/pages/        index, stack, experience
+    src/components/   Svelte components
+    src/layouts/      Base.astro
+    src/data/         stack.ts, experience.ts
+    public/           robots.txt, sitemap.xml, resumes, images
+    wrangler.jsonc    Worker and static-assets config
 
-### Prerequisites
-- Node.js (v20 or later)
-- npm
+## Local development
 
-### Installation
-```bash
-npm install
-```
+Needs Node 22 (see .node-version).
 
-### Development Server
-```bash
-npm run dev
-```
-
-### Build for Production
-```bash
-npm run build
-```
-
-The production-ready files will be generated in the `dist/` directory.
+    npm install
+    npm run dev       # http://localhost:3000
+    npm run build     # writes dist/
+    npm run preview
 
 ## Deployment
 
-The project is automatically deployed to GitHub Pages via GitHub Actions whenever changes are pushed to the `master` branch.
+A Cloudflare Worker named jlai-ca serves dist/ as static assets, configured
+in wrangler.jsonc.
 
-- **Workflow**: `.github/workflows/main.yml`
-- **Deployment Branch**: `gh-pages`
-- **Environment**: `github-pages`
+- Production deploys from main.
+- To deploy by hand, run npm run deploy. It calls wrangler deploy, so run
+  wrangler login first.
+- jlai.ca points at the Worker. www.jlai.ca redirects to the apex through a
+  Cloudflare Redirect Rule.
