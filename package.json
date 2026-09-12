@@ -9,9 +9,6 @@
     "preview": "astro preview",
     "deploy": "wrangler deploy"
   },
-  "dependencies": {
-    "font-awesome": "^4.7.0"
-  },
   "devDependencies": {
     "@astrojs/svelte": "^9.0.0",
     "@tailwindcss/vite": "^4.2.1",

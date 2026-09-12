@@ -25,6 +25,7 @@
     { id: 'github', label: 'github', hint: 'jlai403', keywords: 'github social code', type: 'external', href: 'https://github.com/jlai403' },
     { id: 'linkedin', label: 'linkedin', hint: 'jlai403', keywords: 'linkedin social work', type: 'external', href: 'https://ca.linkedin.com/in/jlai403' },
     { id: 'dotfiles', label: '.dotfiles', hint: 'github', keywords: 'dotfiles config dotfiles', type: 'external', href: 'https://github.com/jlai403/.dotfiles' },
+    { id: 'x', label: 'x', hint: '@jlai_', keywords: 'x twitter social', type: 'external', href: 'https://x.com/jlai_' },
   ];
 
   const filtered = $derived(
@@ -155,9 +156,9 @@
               {#if item.type === 'nav'}
                 <span class="cmdk-icon">→</span>
               {:else if item.type === 'external'}
-                <i class="fa fa-external-link cmdk-icon"></i>
+                <i class="fa-solid fa-arrow-up-right-from-square cmdk-icon"></i>
               {:else}
-                <i class="fa cmdk-icon" class:fa-sun-o={!isDark} class:fa-moon-o={isDark}></i>
+                <i class="fa-regular cmdk-icon" class:fa-sun={!isDark} class:fa-moon={isDark}></i>
               {/if}
               <span>{item.label}</span>
             </span>

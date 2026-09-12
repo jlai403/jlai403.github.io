@@ -26,8 +26,8 @@
   aria-label="Toggle theme"
 >
   {#if !isDark}
-    <i class="fa fa-sun-o text-[16px]"></i>
+    <i class="fa-regular fa-sun text-[16px]"></i>
   {:else}
-    <i class="fa fa-moon-o text-[16px]"></i>
+    <i class="fa-regular fa-moon text-[16px]"></i>
   {/if}
 </button>
