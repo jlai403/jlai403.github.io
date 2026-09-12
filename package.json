@@ -12,7 +12,7 @@
   "devDependencies": {
     "@astrojs/svelte": "^9.0.0",
     "@tailwindcss/vite": "^4.2.1",
-    "astro": "^7.0.0",
+    "astro": "^7.3.2",
     "svelte": "^5.43.6",
     "tailwindcss": "^4.2.1",
     "typescript": "^6.0.0",
