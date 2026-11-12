@@ -10,7 +10,7 @@
     "deploy": "wrangler deploy"
   },
   "devDependencies": {
-    "@astrojs/svelte": "^9.0.0",
+    "@astrojs/svelte": "^9.1.2",
     "@tailwindcss/vite": "^4.2.1",
     "astro": "^7.0.0",
     "svelte": "^5.43.6",
